@@ -1,0 +1,3 @@
+-keep class com.edvaldosimplicio.centralassinante.** { *; }
+-keep class io.flutter.** { *; }
+-keep class com.google.gson.** { *; }
