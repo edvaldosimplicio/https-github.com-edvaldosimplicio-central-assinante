@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const helmet = require("helmet");
 const rateLimit = require("express-rate-limit");
+const path = require("path");
 
 const authRoutes = require("./routes/authRoutes");
 const financeiroRoutes = require("./routes/financeiroRoutes");
@@ -40,8 +41,16 @@ app.use("/api/provedor", provedorRoutes);
 app.use("/api/iptv", iptvRoutes);
 app.use("/api/admin", adminRoutes);
 
+// Serve admin panel
+app.use("/admin", express.static(path.join(__dirname, "../../admin")));
+
 app.get("/api/health", (req, res) => {
   res.json({ status: "ok", timestamp: new Date().toISOString() });
+});
+
+// Redirect root to admin
+app.get("/", (req, res) => {
+  res.redirect("/admin");
 });
 
 app.use((err, req, res, next) => {
