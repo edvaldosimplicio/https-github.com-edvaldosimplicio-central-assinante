@@ -1,3 +1,6 @@
 -keep class com.edvaldosimplicio.centralassinante.** { *; }
 -keep class io.flutter.** { *; }
 -keep class com.google.gson.** { *; }
+-dontwarn com.google.android.play.core.splitcompat.SplitCompatApplication
+-dontwarn com.google.android.play.core.splitinstall.**
+-dontwarn com.google.android.play.core.tasks.**
