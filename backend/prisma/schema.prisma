@@ -1,0 +1,88 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Provedor {
+  id        String   @id @default(uuid())
+  nome      String
+  slug            String   @unique
+  ativo           Boolean  @default(true)
+  logoUrl         String?  @map("logo_url")
+  primaryColor    String?  @map("primary_color")
+  secondaryColor  String?  @map("secondary_color")
+  suporteWhatsapp String?  @map("suporte_whatsapp")
+  m3uUrl          String?  @map("m3u_url")
+  createdAt       DateTime @default(now()) @map("created_at")
+  updatedAt       DateTime @updatedAt @map("updated_at")
+
+  configuracaoERP ConfiguracaoERP?
+  usuariosApp     UsuarioApp[]
+  tokensSessao    TokenSessao[]
+
+  @@map("provedores")
+}
+
+model ConfiguracaoERP {
+  id          String   @id @default(uuid())
+  provedorId  String   @unique @map("provedor_id")
+  tipoERP     String   @map("tipo_erp") // "IXC" | "SGP"
+  apiBaseUrl  String   @map("api_base_url")
+  apiToken    String   @map("api_token")
+  apiSecret   String?  @map("api_secret")
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  provedor Provedor @relation(fields: [provedorId], references: [id], onDelete: Cascade)
+
+  @@map("configuracoes_erp")
+}
+
+model UsuarioApp {
+  id            String   @id @default(uuid())
+  provedorId    String   @map("provedor_id")
+  cpfCnpj       String   @map("cpf_cnpj")
+  nome          String
+  codigoCliente String   @map("codigo_cliente") // id do cliente no ERP
+  email         String?
+  telefone      String?
+  ativo         Boolean  @default(true)
+  createdAt     DateTime @default(now()) @map("created_at")
+  updatedAt     DateTime @updatedAt @map("updated_at")
+
+  provedor    Provedor     @relation(fields: [provedorId], references: [id], onDelete: Cascade)
+  tokensSessao TokenSessao[]
+
+  @@unique([provedorId, cpfCnpj])
+  @@map("usuarios_app")
+}
+
+model TokenSessao {
+  id          String   @id @default(uuid())
+  provedorId  String   @map("provedor_id")
+  usuarioId   String   @map("usuario_id")
+  token       String   @unique
+  expiresAt   DateTime @map("expires_at")
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  provedor Provedor  @relation(fields: [provedorId], references: [id], onDelete: Cascade)
+  usuario  UsuarioApp @relation(fields: [usuarioId], references: [id], onDelete: Cascade)
+
+  @@map("tokens_sessao")
+}
+
+model CacheERP {
+  id          String   @id @default(uuid())
+  provedorId  String   @map("provedor_id")
+  chave       String   @map("chave")
+  valor       Json
+  expiresAt   DateTime @map("expires_at")
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  @@unique([provedorId, chave])
+  @@map("cache_erp")
+}
