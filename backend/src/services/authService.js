@@ -21,14 +21,69 @@ class AuthService {
       },
     };
 
-    if (provedorSlug) {
-      query.where.provedor = { slug: provedorSlug };
+    const slugFilter = provedorSlug
+      ? { slug: { contains: provedorSlug } }
+      : undefined;
+
+    if (slugFilter) {
+      query.where.provedor = slugFilter;
     }
 
     const usuario = await this.prisma.usuarioApp.findFirst(query);
 
     if (!usuario) {
-      return { sucesso: false, erro: "Cliente não cadastrado ou inativo" };
+      const provedor = await this.prisma.provedor.findFirst({
+        where: provedorSlug ? { ...slugFilter, ativo: true } : { ativo: true },
+        include: { configuracaoERP: true },
+      });
+
+      if (!provedor || !provedor.configuracaoERP) {
+        return { sucesso: false, erro: "Cliente não cadastrado ou provedor não encontrado" };
+      }
+
+      let dadosCliente;
+      try {
+        const adapter = getErpAdapter(provedor.configuracaoERP.tipoERP, provedor.configuracaoERP);
+        dadosCliente = await adapter.getClientePorCpf(cleanCpf);
+      } catch (e) {
+        console.error("Erro ao buscar cliente no ERP:", e.message);
+        return { sucesso: false, erro: "Cliente não encontrado no ERP" };
+      }
+
+      if (!dadosCliente) {
+        return { sucesso: false, erro: "Cliente não encontrado no ERP" };
+      }
+
+      const token = jwt.sign(
+        {
+          provedorId: provedor.id,
+          codigoCliente: dadosCliente.codigo,
+          provedorSlug: provedor.slug,
+          nome: dadosCliente.nome,
+        },
+        process.env.JWT_SECRET,
+        { expiresIn: "7d" }
+      );
+
+      return {
+        sucesso: true,
+        token,
+        usuario: {
+          nome: dadosCliente.nome,
+          cpfCnpj: cleanCpf,
+          email: dadosCliente.email || "",
+        },
+        provedor: {
+          id: provedor.id,
+          nome: provedor.nome,
+          slug: provedor.slug,
+          logo_url: provedor.logoUrl,
+          primary_color: provedor.primaryColor,
+          secondary_color: provedor.secondaryColor,
+          suporte_whatsapp: provedor.suporteWhatsapp,
+          m3u_url: provedor.m3uUrl,
+        },
+      };
     }
 
     const provedor = usuario.provedor;

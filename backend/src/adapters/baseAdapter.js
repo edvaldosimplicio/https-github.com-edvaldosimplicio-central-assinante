@@ -9,6 +9,10 @@ class BaseErpAdapter {
     throw new Error("Método getCliente deve ser implementado");
   }
 
+  async getClientePorCpf(cpf) {
+    throw new Error("Método getClientePorCpf deve ser implementado");
+  }
+
   async getFaturaAberta(codigoCliente) {
     throw new Error("Método getFaturaAberta deve ser implementado");
   }

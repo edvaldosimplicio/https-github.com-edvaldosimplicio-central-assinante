@@ -3,14 +3,15 @@ const AuthService = require("../services/authService");
 class AuthController {
   async login(req, res) {
     try {
-      const { cpf_cnpj } = req.body;
+      const { cpf_cnpj, cpf, provider_slug } = req.body;
+      const cleanCpf = (cpf_cnpj || cpf || "").replace(/\D/g, "");
 
-      if (!cpf_cnpj) {
+      if (!cleanCpf) {
         return res.status(400).json({ error: "CPF/CNPJ é obrigatório" });
       }
 
       const authService = new AuthService(req.prisma);
-      const result = await authService.login(cpf_cnpj);
+      const result = await authService.login(cleanCpf, provider_slug);
 
       if (!result.sucesso) {
         return res.status(401).json({ error: result.erro });
