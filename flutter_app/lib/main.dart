@@ -29,11 +29,11 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (_) => AuthProvider()..initialize()),
         ChangeNotifierProxyProvider<AuthProvider, HomeProvider>(
-          create: (_) => HomeProvider(ApiService(baseUrl: 'http://localhost:3000/api')),
+          create: (_) => HomeProvider(ApiService(baseUrl: 'http://38.250.217.82:3000/api')),
           update: (context, auth, previous) {
             if (auth.isLoggedIn) {
               final api = ApiService(
-                baseUrl: 'http://localhost:3000/api',
+                baseUrl: 'http://38.250.217.82:3000/api',
                 token: auth.token,
                 provedorId: auth.provedorConfig?.slug,
               );
@@ -43,7 +43,7 @@ class MyApp extends StatelessWidget {
               }
               return provider;
             }
-            return previous ?? HomeProvider(ApiService(baseUrl: 'http://localhost:3000/api'));
+            return previous ?? HomeProvider(ApiService(baseUrl: 'http://38.250.217.82:3000/api'));
           },
         ),
       ],

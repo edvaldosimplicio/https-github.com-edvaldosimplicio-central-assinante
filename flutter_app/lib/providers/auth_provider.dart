@@ -24,7 +24,7 @@ class AuthProvider extends ChangeNotifier {
 
   Future<void> initialize() async {
     final prefs = await SharedPreferences.getInstance();
-    final baseUrl = prefs.getString('api_base_url') ?? 'http://localhost:3000/api';
+    final baseUrl = prefs.getString('api_base_url') ?? 'http://38.250.217.82:3000/api';
     final api = ApiService(baseUrl: baseUrl);
     _authService = AuthService(api);
 

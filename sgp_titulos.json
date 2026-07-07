@@ -1,0 +1,2411 @@
+
+<script type="text/javascript" charset="utf-8">
+    
+       var oTable 
+    
+    
+    $(document).ready(function() {
+        function getDatatablesLanguage() {
+            result = {
+                "sProcessing":   "Processando...",
+                "sLengthMenu":   "Mostrar _MENU_ registros",
+                "sZeroRecords":  "Não foram encontrados resultados",
+                "sInfo":         "Mostrando de _START_ até _END_ de _TOTAL_ registros",
+                "sInfoEmpty":    "Mostrando de 0 até 0 de 0 registros",
+                "sInfoFiltered": "(filtrado de _MAX_ registros no total)",
+                "sInfoPostFix":  "",
+                "sSearch":       "Buscar:",
+                "sUrl":          "",
+                "oPaginate": {
+                    "sFirst":    "Primeiro",
+                    "sPrevious": "Anterior",
+                    "sNext":     "Seguinte",
+                    "sLast":     "Último"
+                }
+            }
+
+            try {
+                $.ajax({
+                    url: "/static/all/js/jquery.dataTables/pt_BR.txt",
+                    async: false,  
+                    global: false,
+                    dataType: 'json',
+                    success: function(obj) {
+                        result = $.extend({}, obj);
+                    }
+                })
+                return result;
+            } catch (e) {
+                console.log('datatables language', e)
+            }
+            
+            return result;
+        }
+
+        oTable=$('.tablelisttituloA').dataTable({
+            
+
+            
+            
+            
+            
+            
+            
+
+            
+            
+            "bJQueryUI": true,
+            "sPaginationType": "full_numbers",
+            
+            "bLengthChange": false,
+            
+        
+            
+        
+            
+        
+                    
+            
+            "iDisplayLength": 100,
+            
+            
+            
+            "aaSorting": [[4,'asc']],
+            
+            "orderClasses": false,
+            "language": getDatatablesLanguage(),
+            
+        });
+       
+    });
+</script>
+
+<script type="text/javascript" charset="utf-8">
+    
+       var oTable 
+    
+    
+    $(document).ready(function() {
+        function getDatatablesLanguage() {
+            result = {
+                "sProcessing":   "Processando...",
+                "sLengthMenu":   "Mostrar _MENU_ registros",
+                "sZeroRecords":  "Não foram encontrados resultados",
+                "sInfo":         "Mostrando de _START_ até _END_ de _TOTAL_ registros",
+                "sInfoEmpty":    "Mostrando de 0 até 0 de 0 registros",
+                "sInfoFiltered": "(filtrado de _MAX_ registros no total)",
+                "sInfoPostFix":  "",
+                "sSearch":       "Buscar:",
+                "sUrl":          "",
+                "oPaginate": {
+                    "sFirst":    "Primeiro",
+                    "sPrevious": "Anterior",
+                    "sNext":     "Seguinte",
+                    "sLast":     "Último"
+                }
+            }
+
+            try {
+                $.ajax({
+                    url: "/static/all/js/jquery.dataTables/pt_BR.txt",
+                    async: false,  
+                    global: false,
+                    dataType: 'json',
+                    success: function(obj) {
+                        result = $.extend({}, obj);
+                    }
+                })
+                return result;
+            } catch (e) {
+                console.log('datatables language', e)
+            }
+            
+            return result;
+        }
+
+        oTable=$('.tablelisttituloP').dataTable({
+            
+
+            
+            
+            
+            
+            
+            
+
+            
+            
+            "bJQueryUI": true,
+            "sPaginationType": "full_numbers",
+            
+            "bLengthChange": false,
+            
+        
+            
+        
+            
+        
+                    
+            
+            "iDisplayLength": 100,
+            
+            
+            
+            "aaSorting": [[4,'desc']],
+            
+            "orderClasses": false,
+            "language": getDatatablesLanguage(),
+            
+        });
+       
+    });
+</script>
+
+<script type="text/javascript" charset="utf-8">
+    
+       var oTable 
+    
+    
+    $(document).ready(function() {
+        function getDatatablesLanguage() {
+            result = {
+                "sProcessing":   "Processando...",
+                "sLengthMenu":   "Mostrar _MENU_ registros",
+                "sZeroRecords":  "Não foram encontrados resultados",
+                "sInfo":         "Mostrando de _START_ até _END_ de _TOTAL_ registros",
+                "sInfoEmpty":    "Mostrando de 0 até 0 de 0 registros",
+                "sInfoFiltered": "(filtrado de _MAX_ registros no total)",
+                "sInfoPostFix":  "",
+                "sSearch":       "Buscar:",
+                "sUrl":          "",
+                "oPaginate": {
+                    "sFirst":    "Primeiro",
+                    "sPrevious": "Anterior",
+                    "sNext":     "Seguinte",
+                    "sLast":     "Último"
+                }
+            }
+
+            try {
+                $.ajax({
+                    url: "/static/all/js/jquery.dataTables/pt_BR.txt",
+                    async: false,  
+                    global: false,
+                    dataType: 'json',
+                    success: function(obj) {
+                        result = $.extend({}, obj);
+                    }
+                })
+                return result;
+            } catch (e) {
+                console.log('datatables language', e)
+            }
+            
+            return result;
+        }
+
+        oTable=$('.tablelisttituloC').dataTable({
+            
+
+            
+            
+            
+            
+            
+            
+
+            
+            
+            "bJQueryUI": true,
+            "sPaginationType": "full_numbers",
+            
+            "bLengthChange": false,
+            
+        
+            
+        
+            
+        
+                    
+            
+            "iDisplayLength": 100,
+            
+            
+            
+            "aaSorting": [[4,'desc']],
+            
+            "orderClasses": false,
+            "language": getDatatablesLanguage(),
+            
+        });
+       
+    });
+</script>
+
+
+<div id="tituloscliente"> 
+<script type="text/javascript" charset="utf-8">
+       $(document).ready(function() {
+			$('.titulo_detail').click(function() { 
+        $('#titulo_detail').dialog({ 
+          width: 575,
+          position: { my: 'top', at: 'top+100' },
+        });
+			});
+			$('#accordion').accordion({ animated: 'easeslide',heightStyle: "content" });
+
+
+		$("#printtitulodo").click(function() { 
+
+		    var data = new Array();	        
+	        $(".titulosA:input[name=titulos\\[\\]]:checked").each(function(){
+				data.push($(this).val());
+			});	
+	        if (data.length == 0) { 
+	          alert("Nenhum título selecionado.");
+	          return false;
+	      	}
+
+			$('#formtitulolote').attr('action','/admin/financeiro/titulo/print/lista/');
+			$('#formtitulolote').attr('target','_blank');
+			$('#formtitulolote').submit();
+		});
+
+		$("#printtitulopixdo").click(function() { 
+
+		    var data = new Array();	        
+	        $(".titulosA:input[name=titulos\\[\\]]:checked").each(function(){
+				data.push($(this).val());
+			});	
+	        if (data.length == 0) { 
+	          alert("Nenhum título selecionado.");
+	          return false;
+	      	}
+
+			$('#formtitulolote').attr('action','/admin/financeiro/pix/print/lista/');
+			$('#formtitulolote').attr('target','_blank');
+			$('#formtitulolote').submit();
+		});
+
+
+		$("#descontodo").click(function() { 
+
+		    var data = new Array();	        
+	        $(".titulosA:input[name=titulos\\[\\]]:checked").each(function(){
+				data.push($(this).val());
+			});	
+	        if (data.length == 0) { 
+	          alert("Nenhum título selecionado.");
+	          return false;
+	      	}
+
+	        if (data.length > 1) { 
+	          alert("Desconto de título apenas individual");
+	          return false;
+	      	}
+
+			$('#formtitulolote').attr('action','/admin/financeiro/titulo/cobranca/individual/');
+			$('#formtitulolote').attr('target','_blank');
+			$('#formtitulolote').submit();
+		});
+
+		$("#printcarnetitulodo").click(function() { 
+
+		    var data = new Array();	        
+	        $(".titulosA:input[name=titulos\\[\\]]:checked").each(function(){
+				data.push($(this).val());
+			});	
+	        if (data.length == 0) { 
+	          alert("Nenhum título selecionado.");
+	          return false;
+	      	}
+
+			$('#formtitulolote').attr('action','/admin/financeiro/carne/lote/print/');
+			$('#formtitulolote').attr('target','_blank');
+			$('#formtitulolote').submit();
+		});
+
+
+		$("#liquidartitulodo").click(function() { 
+
+		    var data = new Array();	        
+	        $(".titulosA:input[name=titulos\\[\\]]:checked").each(function(){
+				data.push($(this).val());
+			});	
+	        if (data.length == 0) { 
+	          alert("Nenhum título selecionado.");
+	          return false;
+	      	}
+
+			$('#formtitulolote').attr('action','/admin/financeiro/titulo/get/lote/2048/');
+			$('#formtitulolote').attr('target','_self');
+			$('#formtitulolote').submit();
+		});
+
+		$("#cancelartitulodo").click(function() { 
+
+		    var data = new Array();	        
+	        $(".titulosA:input[name=titulos\\[\\]]:checked").each(function(){
+				data.push($(this).val());
+			});	
+	        if (data.length == 0) { 
+	          alert("Nenhum título selecionado.");
+	          return false;
+	      	}
+
+			$('#formtitulolote').attr('action','/admin/financeiro/titulo/cancel/lote/2048/');
+			$('#formtitulolote').attr('target','_self');
+			$('#formtitulolote').submit();
+		});
+		
+
+		$("#emailtitulodo").click(function() { 
+
+		    var data = new Array();	        
+	        $(".titulosA:input[name=titulos\\[\\]]:checked").each(function(){
+				data.push($(this).val());
+			});	
+	        if (data.length == 0) { 
+	          alert("Nenhum título selecionado.");
+	          return false;
+	      	}
+
+			$('#formtitulolote').attr('action','/admin/financeiro/titulo/email/cliente/2048/');
+			$('#formtitulolote').attr('target','_self');
+			$('#formtitulolote').submit();
+		});
+		
+
+
+		$("#cartacobrancado").click(function() { 
+
+		    var data = new Array();	        
+	        $(".titulosA:input[name=titulos\\[\\]]:checked").each(function(){
+				data.push($(this).val());
+			});	
+	        if (data.length == 0) { 
+	          alert("Nenhum título selecionado.");
+	          return false;
+	      	}
+
+			$('#formtitulolote').attr('action','/admin/cobranca/cartacobranca/add/cliente/2048/');
+			$('#formtitulolote').attr('target','_self');
+			$('#formtitulolote').submit();
+		});
+
+
+
+
+		$("#alterartitulodo").click(function() { 
+
+		    var data = new Array();	        
+	        $(".titulosA:input[name=titulos\\[\\]]:checked").each(function(){
+				data.push($(this).val());
+			});	
+	        if (data.length == 0) { 
+	          alert("Nenhum título selecionado.");
+	          return false;
+	      	}
+
+			$('#formtitulolote').attr('action','/admin/financeiro/titulo/edit/lote/2048/');
+			$('#formtitulolote').attr('target','_self');
+			$('#formtitulolote').submit();
+		});
+
+
+		$("#printtitulodop").click(function() { 
+
+		    var data = new Array();	        
+	        $(".titulosP:input[name=titulos\\[\\]]:checked").each(function(){
+				data.push($(this).val());
+			});	
+	        if (data.length == 0) { 
+	          alert("Nenhum título selecionado.");
+	          return false;
+	      	}
+
+			$('#formtitulolotep').attr('action','/admin/financeiro/titulo/print/lista/');
+			$('#formtitulolotep').attr('target','_blank');
+			$('#formtitulolotep').submit();
+		});
+
+		$("#printcomprovantedo").click(function() { 
+
+		    var data = new Array();	        
+	        $(".titulosP:input[name=titulos\\[\\]]:checked").each(function(){
+				data.push($(this).val());
+			});	
+	        if (data.length == 0) { 
+	          alert("Nenhum título selecionado.");
+	          return false;
+	      	}
+
+			$('#formtitulolotep').attr('action','/admin/financeiro/titulo/recibo/printlist/');
+			$('#formtitulolotep').attr('target','_blank');
+			$('#formtitulolotep').submit();
+		});
+
+		$("#removeremessado").click(function() { 
+
+		    var data = new Array();	        
+	        $(".titulosA:input[name=titulos\\[\\]]:checked").each(function(){
+				data.push($(this).val());
+			});	
+	        if (data.length == 0) { 
+	          alert("Nenhum título selecionado.");
+	          return false;
+	      	}
+
+    		confirmrequest = confirm(' Deseja realmente remover da última remessa os títulos selecionados ? ');
+    		if (confirmrequest) {
+				$('#formtitulolote').attr('action','/admin/financeiro/remessa/cobranca/titulo/delete/list/');
+				$('#formtitulolote').attr('target','_blank');
+				$('#formtitulolote').submit();
+			} else { 
+				return false;
+			}
+		});
+
+
+    $("#titulostitulardo").click(function() { 
+
+        var data = new Array();         
+          $(".titulosA:input[name=titulos\\[\\]]:checked").each(function(){
+        data.push($(this).val());
+      }); 
+          if (data.length == 0) { 
+            alert("Nenhum título selecionado.");
+            return false;
+          }
+
+      $('#formtitulolote').attr('action','/admin/financeiro/titulo/titular/alterar/2048/list/');
+      $('#formtitulolote').attr('target','_blank');
+      $('#formtitulolote').submit();
+    });
+
+    $("#cadastronegativo").off("click").on("click", function() { 
+		let titulosEmDia = 0;
+		let contratos = new Set();
+		let data = [];          
+          $(".titulosA:input[name=titulos\\[\\]]:checked").each(function(){
+        	data.push($(this).val());
+			
+			var diasVencido = $(this).closest("tr").data("dias");
+			if(diasVencido < 0){
+				titulosEmDia ++
+			}
+			contrato = $(this).closest("tr").data("contrato").toString();
+			contratos.add(contrato);
+      	});
+
+		if (data.length === 0) { 
+			alert("Nenhum título selecionado.");
+			return false;
+		}
+
+		if (contratos.size > 1) {
+			alert("Selecione apenas títulos de mesmo contratos.");
+			return false;
+		}
+
+		if (contratos.has("")) {
+			alert("Selecione apenas títulos com contratos vinculados.");
+			return false;
+		}
+
+		if(titulosEmDia > 0){
+			alert("Existem títulos selecionados que estão em dia.\nA negativação só poderá ser realizada com títulos em atraso.");
+			return false;
+		}
+		$.ajax({
+			url: '/admin/financeiro/titulo/aviso/ajax/',
+			type: 'GET', 
+			data: {
+				titulos: data.join(',')
+			},
+			success: function(response) {
+				const titulos_negativados = response.titulos_negativados;
+				const titulos_n_negativados = response.titulos_n_negativados;
+				const aviso = response.avisos;
+
+				if (titulos_negativados.length > 0) {
+					const mensagem = aviso + "\nDeseja prosseguir mesmo assim?";
+					if (!confirm(mensagem)) {
+						return;
+					}
+				}
+				
+				$('#formtitulolote')
+					.attr('action', '/admin/cliente/2048/cadastronegativo/add')
+					.attr('target', '_blank')
+					.submit();
+			},
+			error: function(error) {
+				console.log(error);
+				$('#formtitulolote')
+					.attr('action', '/admin/cliente/2048/cadastronegativo/add')
+					.attr('target', '_blank')
+					.submit();
+			}
+		});      
+     
+    });
+
+		$("#sincronizartitulo").click(function() {       
+		  var data = new Array();	        
+      $(".titulosA:input[name=titulos\\[\\]]:checked").each(function(){
+				data.push($(this).val());
+			});
+      
+      if (data.length == 0) { 
+        Swal.fire({
+          title: "Nenhum título selecionado.",
+          icon: "error"
+        });
+        return false;
+      }
+
+      Swal.fire({
+        title: "Deseja sincronizar os Títulos selecionados com a Gateway ?",
+        icon: "info",
+        showCancelButton: true,
+        confirmButtonText: "Sincronizar",
+        cancelButtonText: "Cancelar",
+        allowOutsideClick: false,
+        animation: false,
+      }).then((result) => {
+        if (result.isConfirmed) {
+          setTimeout(function(){
+            Swal.fire({
+              icon: "warning",
+              title: "Processando ...",
+              text: "Atenção, os títulos estão sendo sincronizados. Aguarde até a finalização antes de realizar algum outro processo.",
+              footer: "Esta página será atualizada automaticamente quando o processo for finalizado.",
+              showCancelButton: false,
+              showConfirmButton: false,
+              allowOutsideClick: false,
+            });
+          }, 100);
+
+          $('#formtitulolote').attr('action','/admin/financeiro/titulo/gateway/cliente/2048/sync/list/');
+          $('#formtitulolote').attr('target','_self');
+          $('#formtitulolote').submit();
+        }
+      });
+		});
+
+		$("#gerarpix").click(function() { 
+
+		    var data = new Array();	        
+	        $(".titulosA:input[name=titulos\\[\\]]:checked").each(function(){
+				data.push($(this).val());
+			});	
+	        if (data.length == 0) { 
+	          alert("Nenhum título selecionado.");
+	          return false;
+	      	}
+
+			$('#formtitulolote').attr('action','/admin/financeiro/titulo/pix/cliente/2048/add/list/');
+			$('#formtitulolote').attr('target','_blank');
+			$('#formtitulolote').submit();
+		});
+
+		$("#notafiscalmaildo").click(function() { 
+
+		    var data = new Array();	        
+	        $(".titulosA:input[name=titulos\\[\\]]:checked").each(function(){
+				data.push($(this).val());
+			});	
+	        if (data.length == 0) { 
+	          alert("Nenhum título selecionado.");
+	          return false;
+	      	}
+
+			$('#formtitulolote').attr('action','/admin/fiscal/nfs/mail/cliente/2048/');
+			$('#formtitulolote').attr('target','_blank');
+			$('#formtitulolote').submit();
+		});
+
+		$("#titulosacordodo").click(function() { 
+
+		    var data = new Array();	        
+	        $(".titulosA:input[name=titulos\\[\\]]:checked").each(function(){
+				data.push($(this).val());
+			});	
+	        if (data.length == 0) { 
+	          alert("Nenhum título selecionado.");
+	          return false;
+	      	}
+
+			$('#formtitulolote').attr('action','/admin/financeiro/acordopagamento/cliente/2048/add/');
+			$('#formtitulolote').attr('target','_blank');
+			$('#formtitulolote').submit();
+		});
+
+
+		$("#notafiscaldo").click(function() { 
+
+		    var data = new Array();	        
+	        $(".titulosA:input[name=titulos\\[\\]]:checked").each(function(){
+				data.push($(this).val());
+			});	
+	        if (data.length == 0) { 
+	          alert("Nenhum título selecionado.");
+	          return false;
+	      	}
+
+			$('#formtitulolote').attr('action','/admin/fiscal/nfs/titulo/lote/cliente/2048/create/');
+			$('#formtitulolote').attr('target','_blank');
+			$('#formtitulolote').submit();
+		});
+
+		$("#nfcomdo").click(function() { 
+
+		    var data = new Array();	        
+	        $(".titulosA:input[name=titulos\\[\\]]:checked").each(function(){
+				data.push($(this).val());
+			});	
+	        if (data.length == 0) { 
+	          alert("Nenhum título selecionado.");
+	          return false;
+	      	}
+
+			$('#formtitulolote').attr('action','/admin/fiscal/nfs/titulo/lote/cliente/2048/create/nfcom/');
+			$('#formtitulolote').attr('target','_blank');
+			$('#formtitulolote').submit();
+		});
+
+		$("#nfcompagdo").click(function() { 
+
+		    var data = new Array();	        
+	        $(".titulosP:input[name=titulos\\[\\]]:checked").each(function(){
+				data.push($(this).val());
+			});	
+	        if (data.length == 0) { 
+	          alert("Nenhum título selecionado.");
+	          return false;
+	      	}
+
+			$('#formtitulolotep').attr('action','/admin/fiscal/nfs/titulo/lote/cliente/2048/create/nfcom/');
+			$('#formtitulolotep').attr('target','_blank');
+			$('#formtitulolotep').submit();
+		});
+
+		$("#selectall").click(function(){
+			var checked_status = this.checked;
+			$(".titulosA:input[name=titulos\\[\\]]").each(function(){
+				this.checked = checked_status;
+			});
+		});	
+
+        $( "#id_contrato").select2({
+            
+            theme: 'classic',
+                width: '120'            
+        });
+
+        $('#id_contrato').change(function() { 
+        	$('#tituloscliente').load('/admin/financeiro/cliente/2048/titulos/?contrato='+this.value);
+        });
+
+        $('.tooltip').tooltipster({
+			contentAsHTML: true,
+			position: "top",
+			maxWidth: 450,
+		});
+
+		$(document).on('click', '.consultarnotas', function() {
+		$('#consultarnotas').dialog({
+			width: Math.min(1100, $(window).width() - 40),
+			height: Math.min(720, $(window).height() - 60),
+			modal: true,
+			title: "Consultar Notas",
+			close: function() {
+				$(this).empty();
+			}
+		});
+	});
+
+       });
+
+	   function tituloAvisoConfirm(url_action, url_confirm) {
+			$.ajax({
+				url: url_confirm,
+				global: false,
+				success: function(data) {
+					if (data.avisos.length > 0) {
+						var avisos = "";
+					
+						$.each(data.avisos, function(index, value) {
+							avisos += value + "\n";
+						});
+
+						avisos += "Deseja prosseguir?";
+
+						if (confirm(avisos)) {window.location=url_action;}
+					} else {
+						window.location=url_action;
+					}
+				},
+				error: function(xhr) {window.location=url_action;}
+			});
+		}
+</script>
+
+<div class="add_content_buttons">
+  <span class="filter-group">
+    <label for="id_contrato">Contrato:</label>
+    <select autocomplete="off" id="id_contrato" name="contrato">
+      <option value=""></option>
+      
+        <option value="10982" >10982</option>
+      
+    </select>
+  </span>
+  <span class="filter-group">
+    <strong style="color: #8DA456;"> Em aberto(12): 720,00  </strong> |
+    <strong style="color: #3B8E3A;"> Pagos(30): 1.808,86   </strong> |
+    <strong style="color: #8D918F;"> Cancelados(0): 0,00  </strong> |
+    <strong style="color: #EA342E;"> Vencidos(0): 0,00  </strong>
+  </span>
+
+  <span class="bar-actions">
+    <a href="/admin/financeiro/titulo/cliente/2048/mensalidade/add" class="button yellow" style="color: white;" id="linkaddmensalideade"> Cadastrar Mensalidade Avulsa </a>
+    <a href="/admin/financeiro/titulo/cliente/2048/add/" class="button blue" style="color: white;" id="linkadd"> Cadastrar Título Avulso </a>
+  </span>
+</div>
+
+<div id="accordion">
+	<h3><a href="#">Títulos em aberto</a></h3>
+	<div style="padding: 2px;">
+	<form style="padding: 0px;" action="#" method="get" id="formtitulolote" target="_blank">
+<input type='hidden' name='csrfmiddlewaretoken' value='y7AJlwHlA2HsPCU3yRh9gDLkdNpAYMwq3T4TzogrJnBDjkPkd7Aj8e8oJOpfuy3N' />
+		<table class="tablelisttituloA display">
+			<thead>
+		       <tr>
+		           <th width="20px"> <input type="checkbox" name="selectall" class="checkbox" value="1" id="selectall"/> </th>
+			       <th width="75px"> Contr. </th>
+		           <th width="170px"> N. Doc. </th>
+		           <th width="90px"> Emissão </th>
+		           <th width="95px"> Vencimento </th>
+		           <th width="50px"> Dias </th>
+		           <th width="85px"> Valor </th>
+		           <th width="140px"> Valor Cor. </th>
+				   <th width="80px"> Portador </th>
+				   <th width="120px"> Modo </th>
+				   <th width="70px"> NF </th>
+		           <th width="300px" class="col-acoes">  </th>
+		       </tr>
+			</thead>
+			<tbody>
+		        
+		          <tr  data-dias="-343"
+					 data-contrato="10982">
+					<td> 
+					<input type="checkbox" name="titulos[]" class="titulosA" value="108098"/>
+					</td>	
+			          <td> 10982 </td>
+					  <td class="">
+					  115620 
+					  
+					  	- <span style="font-size: 10px; font-weight: bold;color:#05a193;">PIX</span>
+					  
+					  
+					  	- <span style="font-size: 10px; font-weight: bold;"> Reg. </span>
+					   
+					   <div class="info-acordo">
+							
+						</div>
+					  </td>
+					  <td> 07/07/2026 </td>
+					  <td class="tbold" style="color: #3d45e8;"> 
+						15/06/2027
+					  </td>					
+					  <td>   </td>
+		              <td class="tbold"> 60,00  </td>
+		              <td class="tbold"> 
+                    
+                      60,00  
+                    
+                  </td>
+					   <td class="banknegociarie">  <span style="display: none;">G14 </span></td>
+					<td> Avulso (Carnê) </td> 
+				    <td style="font-size: 10px;"> 
+				   		<a href="/admin/fiscal/nfs/titulo/create/108098/" title="Gerar Nota Fiscal"> Gerar </a> 
+				   	     
+				   	</td>
+					<td class="col-acoes">
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/print/documento/?q=108098" title="Boleto" target="_blank"><i class="fas fa-barcode"></i></a>
+                      
+                        <a class="iconesacao tooltip" href="/admin/financeiro/pix/print/documento/?q=108098" title="Imprimir Fatura PIX" target="_blank"><i class="fas fa-qrcode"></i></a>
+                      
+						<a class="iconesacao tooltip" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/get/108098/', '/admin/financeiro/titulo/108098/aviso/ajax/');" title="Recebimento Título"><i class="fas fa-hand-holding-usd"></i></a>
+            
+						<a class="iconesacao tooltip edit-titulo" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/edit/108098/', '/admin/financeiro/titulo/108098/aviso/ajax/');" title="Editar Título"><i class="fas fa-edit"></i></a>
+						<a class="iconesacao tooltip titulo_detail" href="#doc108098" onclick="$('#titulo_detail').load('/admin/financeiro/titulo/view/108098/detail/');" title="Detalhes do Título"><i class="fas fa-search"></i></a>
+						<a class="iconesacao tooltip" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/cancel/108098/', '/admin/financeiro/titulo/108098/aviso/ajax/');" title="Cancelar Título"><i class="fas fa-ban"></i></a>
+					</td>
+		          </tr>
+				  
+		        
+		          <tr  data-dias="-314"
+					 data-contrato="10982">
+					<td> 
+					<input type="checkbox" name="titulos[]" class="titulosA" value="108097"/>
+					</td>	
+			          <td> 10982 </td>
+					  <td class="">
+					  115619 
+					  
+					  	- <span style="font-size: 10px; font-weight: bold;color:#05a193;">PIX</span>
+					  
+					  
+					  	- <span style="font-size: 10px; font-weight: bold;"> Reg. </span>
+					   
+					   <div class="info-acordo">
+							
+						</div>
+					  </td>
+					  <td> 07/07/2026 </td>
+					  <td class="tbold" style="color: #3d45e8;"> 
+						15/05/2027
+					  </td>					
+					  <td>   </td>
+		              <td class="tbold"> 60,00  </td>
+		              <td class="tbold"> 
+                    
+                      60,00  
+                    
+                  </td>
+					   <td class="banknegociarie">  <span style="display: none;">G14 </span></td>
+					<td> Avulso (Carnê) </td> 
+				    <td style="font-size: 10px;"> 
+				   		<a href="/admin/fiscal/nfs/titulo/create/108097/" title="Gerar Nota Fiscal"> Gerar </a> 
+				   	     
+				   	</td>
+					<td class="col-acoes">
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/print/documento/?q=108097" title="Boleto" target="_blank"><i class="fas fa-barcode"></i></a>
+                      
+                        <a class="iconesacao tooltip" href="/admin/financeiro/pix/print/documento/?q=108097" title="Imprimir Fatura PIX" target="_blank"><i class="fas fa-qrcode"></i></a>
+                      
+						<a class="iconesacao tooltip" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/get/108097/', '/admin/financeiro/titulo/108097/aviso/ajax/');" title="Recebimento Título"><i class="fas fa-hand-holding-usd"></i></a>
+            
+						<a class="iconesacao tooltip edit-titulo" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/edit/108097/', '/admin/financeiro/titulo/108097/aviso/ajax/');" title="Editar Título"><i class="fas fa-edit"></i></a>
+						<a class="iconesacao tooltip titulo_detail" href="#doc108097" onclick="$('#titulo_detail').load('/admin/financeiro/titulo/view/108097/detail/');" title="Detalhes do Título"><i class="fas fa-search"></i></a>
+						<a class="iconesacao tooltip" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/cancel/108097/', '/admin/financeiro/titulo/108097/aviso/ajax/');" title="Cancelar Título"><i class="fas fa-ban"></i></a>
+					</td>
+		          </tr>
+				  
+		        
+		          <tr  data-dias="-282"
+					 data-contrato="10982">
+					<td> 
+					<input type="checkbox" name="titulos[]" class="titulosA" value="108096"/>
+					</td>	
+			          <td> 10982 </td>
+					  <td class="">
+					  115618 
+					  
+					  	- <span style="font-size: 10px; font-weight: bold;color:#05a193;">PIX</span>
+					  
+					  
+					  	- <span style="font-size: 10px; font-weight: bold;"> Reg. </span>
+					   
+					   <div class="info-acordo">
+							
+						</div>
+					  </td>
+					  <td> 07/07/2026 </td>
+					  <td class="tbold" style="color: #3d45e8;"> 
+						15/04/2027
+					  </td>					
+					  <td>   </td>
+		              <td class="tbold"> 60,00  </td>
+		              <td class="tbold"> 
+                    
+                      60,00  
+                    
+                  </td>
+					   <td class="banknegociarie">  <span style="display: none;">G14 </span></td>
+					<td> Avulso (Carnê) </td> 
+				    <td style="font-size: 10px;"> 
+				   		<a href="/admin/fiscal/nfs/titulo/create/108096/" title="Gerar Nota Fiscal"> Gerar </a> 
+				   	     
+				   	</td>
+					<td class="col-acoes">
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/print/documento/?q=108096" title="Boleto" target="_blank"><i class="fas fa-barcode"></i></a>
+                      
+                        <a class="iconesacao tooltip" href="/admin/financeiro/pix/print/documento/?q=108096" title="Imprimir Fatura PIX" target="_blank"><i class="fas fa-qrcode"></i></a>
+                      
+						<a class="iconesacao tooltip" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/get/108096/', '/admin/financeiro/titulo/108096/aviso/ajax/');" title="Recebimento Título"><i class="fas fa-hand-holding-usd"></i></a>
+            
+						<a class="iconesacao tooltip edit-titulo" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/edit/108096/', '/admin/financeiro/titulo/108096/aviso/ajax/');" title="Editar Título"><i class="fas fa-edit"></i></a>
+						<a class="iconesacao tooltip titulo_detail" href="#doc108096" onclick="$('#titulo_detail').load('/admin/financeiro/titulo/view/108096/detail/');" title="Detalhes do Título"><i class="fas fa-search"></i></a>
+						<a class="iconesacao tooltip" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/cancel/108096/', '/admin/financeiro/titulo/108096/aviso/ajax/');" title="Cancelar Título"><i class="fas fa-ban"></i></a>
+					</td>
+		          </tr>
+				  
+		        
+		          <tr  data-dias="-251"
+					 data-contrato="10982">
+					<td> 
+					<input type="checkbox" name="titulos[]" class="titulosA" value="108095"/>
+					</td>	
+			          <td> 10982 </td>
+					  <td class="">
+					  115617 
+					  
+					  	- <span style="font-size: 10px; font-weight: bold;color:#05a193;">PIX</span>
+					  
+					  
+					  	- <span style="font-size: 10px; font-weight: bold;"> Reg. </span>
+					   
+					   <div class="info-acordo">
+							
+						</div>
+					  </td>
+					  <td> 07/07/2026 </td>
+					  <td class="tbold" style="color: #3d45e8;"> 
+						15/03/2027
+					  </td>					
+					  <td>   </td>
+		              <td class="tbold"> 60,00  </td>
+		              <td class="tbold"> 
+                    
+                      60,00  
+                    
+                  </td>
+					   <td class="banknegociarie">  <span style="display: none;">G14 </span></td>
+					<td> Avulso (Carnê) </td> 
+				    <td style="font-size: 10px;"> 
+				   		<a href="/admin/fiscal/nfs/titulo/create/108095/" title="Gerar Nota Fiscal"> Gerar </a> 
+				   	     
+				   	</td>
+					<td class="col-acoes">
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/print/documento/?q=108095" title="Boleto" target="_blank"><i class="fas fa-barcode"></i></a>
+                      
+                        <a class="iconesacao tooltip" href="/admin/financeiro/pix/print/documento/?q=108095" title="Imprimir Fatura PIX" target="_blank"><i class="fas fa-qrcode"></i></a>
+                      
+						<a class="iconesacao tooltip" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/get/108095/', '/admin/financeiro/titulo/108095/aviso/ajax/');" title="Recebimento Título"><i class="fas fa-hand-holding-usd"></i></a>
+            
+						<a class="iconesacao tooltip edit-titulo" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/edit/108095/', '/admin/financeiro/titulo/108095/aviso/ajax/');" title="Editar Título"><i class="fas fa-edit"></i></a>
+						<a class="iconesacao tooltip titulo_detail" href="#doc108095" onclick="$('#titulo_detail').load('/admin/financeiro/titulo/view/108095/detail/');" title="Detalhes do Título"><i class="fas fa-search"></i></a>
+						<a class="iconesacao tooltip" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/cancel/108095/', '/admin/financeiro/titulo/108095/aviso/ajax/');" title="Cancelar Título"><i class="fas fa-ban"></i></a>
+					</td>
+		          </tr>
+				  
+		        
+		          <tr  data-dias="-223"
+					 data-contrato="10982">
+					<td> 
+					<input type="checkbox" name="titulos[]" class="titulosA" value="108094"/>
+					</td>	
+			          <td> 10982 </td>
+					  <td class="">
+					  115616 
+					  
+					  	- <span style="font-size: 10px; font-weight: bold;color:#05a193;">PIX</span>
+					  
+					  
+					  	- <span style="font-size: 10px; font-weight: bold;"> Reg. </span>
+					   
+					   <div class="info-acordo">
+							
+						</div>
+					  </td>
+					  <td> 07/07/2026 </td>
+					  <td class="tbold" style="color: #3d45e8;"> 
+						15/02/2027
+					  </td>					
+					  <td>   </td>
+		              <td class="tbold"> 60,00  </td>
+		              <td class="tbold"> 
+                    
+                      60,00  
+                    
+                  </td>
+					   <td class="banknegociarie">  <span style="display: none;">G14 </span></td>
+					<td> Avulso (Carnê) </td> 
+				    <td style="font-size: 10px;"> 
+				   		<a href="/admin/fiscal/nfs/titulo/create/108094/" title="Gerar Nota Fiscal"> Gerar </a> 
+				   	     
+				   	</td>
+					<td class="col-acoes">
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/print/documento/?q=108094" title="Boleto" target="_blank"><i class="fas fa-barcode"></i></a>
+                      
+                        <a class="iconesacao tooltip" href="/admin/financeiro/pix/print/documento/?q=108094" title="Imprimir Fatura PIX" target="_blank"><i class="fas fa-qrcode"></i></a>
+                      
+						<a class="iconesacao tooltip" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/get/108094/', '/admin/financeiro/titulo/108094/aviso/ajax/');" title="Recebimento Título"><i class="fas fa-hand-holding-usd"></i></a>
+            
+						<a class="iconesacao tooltip edit-titulo" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/edit/108094/', '/admin/financeiro/titulo/108094/aviso/ajax/');" title="Editar Título"><i class="fas fa-edit"></i></a>
+						<a class="iconesacao tooltip titulo_detail" href="#doc108094" onclick="$('#titulo_detail').load('/admin/financeiro/titulo/view/108094/detail/');" title="Detalhes do Título"><i class="fas fa-search"></i></a>
+						<a class="iconesacao tooltip" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/cancel/108094/', '/admin/financeiro/titulo/108094/aviso/ajax/');" title="Cancelar Título"><i class="fas fa-ban"></i></a>
+					</td>
+		          </tr>
+				  
+		        
+		          <tr  data-dias="-192"
+					 data-contrato="10982">
+					<td> 
+					<input type="checkbox" name="titulos[]" class="titulosA" value="108093"/>
+					</td>	
+			          <td> 10982 </td>
+					  <td class="">
+					  115615 
+					  
+					  	- <span style="font-size: 10px; font-weight: bold;color:#05a193;">PIX</span>
+					  
+					  
+					  	- <span style="font-size: 10px; font-weight: bold;"> Reg. </span>
+					   
+					   <div class="info-acordo">
+							
+						</div>
+					  </td>
+					  <td> 07/07/2026 </td>
+					  <td class="tbold" style="color: #3d45e8;"> 
+						15/01/2027
+					  </td>					
+					  <td>   </td>
+		              <td class="tbold"> 60,00  </td>
+		              <td class="tbold"> 
+                    
+                      60,00  
+                    
+                  </td>
+					   <td class="banknegociarie">  <span style="display: none;">G14 </span></td>
+					<td> Avulso (Carnê) </td> 
+				    <td style="font-size: 10px;"> 
+				   		<a href="/admin/fiscal/nfs/titulo/create/108093/" title="Gerar Nota Fiscal"> Gerar </a> 
+				   	     
+				   	</td>
+					<td class="col-acoes">
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/print/documento/?q=108093" title="Boleto" target="_blank"><i class="fas fa-barcode"></i></a>
+                      
+                        <a class="iconesacao tooltip" href="/admin/financeiro/pix/print/documento/?q=108093" title="Imprimir Fatura PIX" target="_blank"><i class="fas fa-qrcode"></i></a>
+                      
+						<a class="iconesacao tooltip" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/get/108093/', '/admin/financeiro/titulo/108093/aviso/ajax/');" title="Recebimento Título"><i class="fas fa-hand-holding-usd"></i></a>
+            
+						<a class="iconesacao tooltip edit-titulo" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/edit/108093/', '/admin/financeiro/titulo/108093/aviso/ajax/');" title="Editar Título"><i class="fas fa-edit"></i></a>
+						<a class="iconesacao tooltip titulo_detail" href="#doc108093" onclick="$('#titulo_detail').load('/admin/financeiro/titulo/view/108093/detail/');" title="Detalhes do Título"><i class="fas fa-search"></i></a>
+						<a class="iconesacao tooltip" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/cancel/108093/', '/admin/financeiro/titulo/108093/aviso/ajax/');" title="Cancelar Título"><i class="fas fa-ban"></i></a>
+					</td>
+		          </tr>
+				  
+		        
+		          <tr  data-dias="-161"
+					 data-contrato="10982">
+					<td> 
+					<input type="checkbox" name="titulos[]" class="titulosA" value="108092"/>
+					</td>	
+			          <td> 10982 </td>
+					  <td class="">
+					  115614 
+					  
+					  	- <span style="font-size: 10px; font-weight: bold;color:#05a193;">PIX</span>
+					  
+					  
+					  	- <span style="font-size: 10px; font-weight: bold;"> Reg. </span>
+					   
+					   <div class="info-acordo">
+							
+						</div>
+					  </td>
+					  <td> 07/07/2026 </td>
+					  <td class="tbold" style="color: #3d45e8;"> 
+						15/12/2026
+					  </td>					
+					  <td>   </td>
+		              <td class="tbold"> 60,00  </td>
+		              <td class="tbold"> 
+                    
+                      60,00  
+                    
+                  </td>
+					   <td class="banknegociarie">  <span style="display: none;">G14 </span></td>
+					<td> Avulso (Carnê) </td> 
+				    <td style="font-size: 10px;"> 
+				   		<a href="/admin/fiscal/nfs/titulo/create/108092/" title="Gerar Nota Fiscal"> Gerar </a> 
+				   	     
+				   	</td>
+					<td class="col-acoes">
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/print/documento/?q=108092" title="Boleto" target="_blank"><i class="fas fa-barcode"></i></a>
+                      
+                        <a class="iconesacao tooltip" href="/admin/financeiro/pix/print/documento/?q=108092" title="Imprimir Fatura PIX" target="_blank"><i class="fas fa-qrcode"></i></a>
+                      
+						<a class="iconesacao tooltip" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/get/108092/', '/admin/financeiro/titulo/108092/aviso/ajax/');" title="Recebimento Título"><i class="fas fa-hand-holding-usd"></i></a>
+            
+						<a class="iconesacao tooltip edit-titulo" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/edit/108092/', '/admin/financeiro/titulo/108092/aviso/ajax/');" title="Editar Título"><i class="fas fa-edit"></i></a>
+						<a class="iconesacao tooltip titulo_detail" href="#doc108092" onclick="$('#titulo_detail').load('/admin/financeiro/titulo/view/108092/detail/');" title="Detalhes do Título"><i class="fas fa-search"></i></a>
+						<a class="iconesacao tooltip" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/cancel/108092/', '/admin/financeiro/titulo/108092/aviso/ajax/');" title="Cancelar Título"><i class="fas fa-ban"></i></a>
+					</td>
+		          </tr>
+				  
+		        
+		          <tr  data-dias="-132"
+					 data-contrato="10982">
+					<td> 
+					<input type="checkbox" name="titulos[]" class="titulosA" value="108091"/>
+					</td>	
+			          <td> 10982 </td>
+					  <td class="">
+					  115613 
+					  
+					  	- <span style="font-size: 10px; font-weight: bold;color:#05a193;">PIX</span>
+					  
+					  
+					  	- <span style="font-size: 10px; font-weight: bold;"> Reg. </span>
+					   
+					   <div class="info-acordo">
+							
+						</div>
+					  </td>
+					  <td> 07/07/2026 </td>
+					  <td class="tbold" style="color: #3d45e8;"> 
+						15/11/2026
+					  </td>					
+					  <td>   </td>
+		              <td class="tbold"> 60,00  </td>
+		              <td class="tbold"> 
+                    
+                      60,00  
+                    
+                  </td>
+					   <td class="banknegociarie">  <span style="display: none;">G14 </span></td>
+					<td> Avulso (Carnê) </td> 
+				    <td style="font-size: 10px;"> 
+				   		<a href="/admin/fiscal/nfs/titulo/create/108091/" title="Gerar Nota Fiscal"> Gerar </a> 
+				   	     
+				   	</td>
+					<td class="col-acoes">
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/print/documento/?q=108091" title="Boleto" target="_blank"><i class="fas fa-barcode"></i></a>
+                      
+                        <a class="iconesacao tooltip" href="/admin/financeiro/pix/print/documento/?q=108091" title="Imprimir Fatura PIX" target="_blank"><i class="fas fa-qrcode"></i></a>
+                      
+						<a class="iconesacao tooltip" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/get/108091/', '/admin/financeiro/titulo/108091/aviso/ajax/');" title="Recebimento Título"><i class="fas fa-hand-holding-usd"></i></a>
+            
+						<a class="iconesacao tooltip edit-titulo" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/edit/108091/', '/admin/financeiro/titulo/108091/aviso/ajax/');" title="Editar Título"><i class="fas fa-edit"></i></a>
+						<a class="iconesacao tooltip titulo_detail" href="#doc108091" onclick="$('#titulo_detail').load('/admin/financeiro/titulo/view/108091/detail/');" title="Detalhes do Título"><i class="fas fa-search"></i></a>
+						<a class="iconesacao tooltip" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/cancel/108091/', '/admin/financeiro/titulo/108091/aviso/ajax/');" title="Cancelar Título"><i class="fas fa-ban"></i></a>
+					</td>
+		          </tr>
+				  
+		        
+		          <tr  data-dias="-100"
+					 data-contrato="10982">
+					<td> 
+					<input type="checkbox" name="titulos[]" class="titulosA" value="108090"/>
+					</td>	
+			          <td> 10982 </td>
+					  <td class="">
+					  115612 
+					  
+					  	- <span style="font-size: 10px; font-weight: bold;color:#05a193;">PIX</span>
+					  
+					  
+					  	- <span style="font-size: 10px; font-weight: bold;"> Reg. </span>
+					   
+					   <div class="info-acordo">
+							
+						</div>
+					  </td>
+					  <td> 07/07/2026 </td>
+					  <td class="tbold" style="color: #3d45e8;"> 
+						15/10/2026
+					  </td>					
+					  <td>   </td>
+		              <td class="tbold"> 60,00  </td>
+		              <td class="tbold"> 
+                    
+                      60,00  
+                    
+                  </td>
+					   <td class="banknegociarie">  <span style="display: none;">G14 </span></td>
+					<td> Avulso (Carnê) </td> 
+				    <td style="font-size: 10px;"> 
+				   		<a href="/admin/fiscal/nfs/titulo/create/108090/" title="Gerar Nota Fiscal"> Gerar </a> 
+				   	     
+				   	</td>
+					<td class="col-acoes">
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/print/documento/?q=108090" title="Boleto" target="_blank"><i class="fas fa-barcode"></i></a>
+                      
+                        <a class="iconesacao tooltip" href="/admin/financeiro/pix/print/documento/?q=108090" title="Imprimir Fatura PIX" target="_blank"><i class="fas fa-qrcode"></i></a>
+                      
+						<a class="iconesacao tooltip" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/get/108090/', '/admin/financeiro/titulo/108090/aviso/ajax/');" title="Recebimento Título"><i class="fas fa-hand-holding-usd"></i></a>
+            
+						<a class="iconesacao tooltip edit-titulo" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/edit/108090/', '/admin/financeiro/titulo/108090/aviso/ajax/');" title="Editar Título"><i class="fas fa-edit"></i></a>
+						<a class="iconesacao tooltip titulo_detail" href="#doc108090" onclick="$('#titulo_detail').load('/admin/financeiro/titulo/view/108090/detail/');" title="Detalhes do Título"><i class="fas fa-search"></i></a>
+						<a class="iconesacao tooltip" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/cancel/108090/', '/admin/financeiro/titulo/108090/aviso/ajax/');" title="Cancelar Título"><i class="fas fa-ban"></i></a>
+					</td>
+		          </tr>
+				  
+		        
+		          <tr  data-dias="-70"
+					 data-contrato="10982">
+					<td> 
+					<input type="checkbox" name="titulos[]" class="titulosA" value="108089"/>
+					</td>	
+			          <td> 10982 </td>
+					  <td class="">
+					  115611 
+					  
+					  	- <span style="font-size: 10px; font-weight: bold;color:#05a193;">PIX</span>
+					  
+					  
+					  	- <span style="font-size: 10px; font-weight: bold;"> Reg. </span>
+					   
+					   <div class="info-acordo">
+							
+						</div>
+					  </td>
+					  <td> 07/07/2026 </td>
+					  <td class="tbold" style="color: #3d45e8;"> 
+						15/09/2026
+					  </td>					
+					  <td>   </td>
+		              <td class="tbold"> 60,00  </td>
+		              <td class="tbold"> 
+                    
+                      60,00  
+                    
+                  </td>
+					   <td class="banknegociarie">  <span style="display: none;">G14 </span></td>
+					<td> Avulso (Carnê) </td> 
+				    <td style="font-size: 10px;"> 
+				   		<a href="/admin/fiscal/nfs/titulo/create/108089/" title="Gerar Nota Fiscal"> Gerar </a> 
+				   	     
+				   	</td>
+					<td class="col-acoes">
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/print/documento/?q=108089" title="Boleto" target="_blank"><i class="fas fa-barcode"></i></a>
+                      
+                        <a class="iconesacao tooltip" href="/admin/financeiro/pix/print/documento/?q=108089" title="Imprimir Fatura PIX" target="_blank"><i class="fas fa-qrcode"></i></a>
+                      
+						<a class="iconesacao tooltip" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/get/108089/', '/admin/financeiro/titulo/108089/aviso/ajax/');" title="Recebimento Título"><i class="fas fa-hand-holding-usd"></i></a>
+            
+						<a class="iconesacao tooltip edit-titulo" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/edit/108089/', '/admin/financeiro/titulo/108089/aviso/ajax/');" title="Editar Título"><i class="fas fa-edit"></i></a>
+						<a class="iconesacao tooltip titulo_detail" href="#doc108089" onclick="$('#titulo_detail').load('/admin/financeiro/titulo/view/108089/detail/');" title="Detalhes do Título"><i class="fas fa-search"></i></a>
+						<a class="iconesacao tooltip" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/cancel/108089/', '/admin/financeiro/titulo/108089/aviso/ajax/');" title="Cancelar Título"><i class="fas fa-ban"></i></a>
+					</td>
+		          </tr>
+				  
+		        
+		          <tr  data-dias="-41"
+					 data-contrato="10982">
+					<td> 
+					<input type="checkbox" name="titulos[]" class="titulosA" value="108088"/>
+					</td>	
+			          <td> 10982 </td>
+					  <td class="">
+					  115610 
+					  
+					  	- <span style="font-size: 10px; font-weight: bold;color:#05a193;">PIX</span>
+					  
+					  
+					  	- <span style="font-size: 10px; font-weight: bold;"> Reg. </span>
+					   
+					   <div class="info-acordo">
+							
+						</div>
+					  </td>
+					  <td> 07/07/2026 </td>
+					  <td class="tbold" style="color: #3d45e8;"> 
+						15/08/2026
+					  </td>					
+					  <td>   </td>
+		              <td class="tbold"> 60,00  </td>
+		              <td class="tbold"> 
+                    
+                      60,00  
+                    
+                  </td>
+					   <td class="banknegociarie">  <span style="display: none;">G14 </span></td>
+					<td> Avulso (Carnê) </td> 
+				    <td style="font-size: 10px;"> 
+				   		<a href="/admin/fiscal/nfs/titulo/create/108088/" title="Gerar Nota Fiscal"> Gerar </a> 
+				   	     
+				   	</td>
+					<td class="col-acoes">
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/print/documento/?q=108088" title="Boleto" target="_blank"><i class="fas fa-barcode"></i></a>
+                      
+                        <a class="iconesacao tooltip" href="/admin/financeiro/pix/print/documento/?q=108088" title="Imprimir Fatura PIX" target="_blank"><i class="fas fa-qrcode"></i></a>
+                      
+						<a class="iconesacao tooltip" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/get/108088/', '/admin/financeiro/titulo/108088/aviso/ajax/');" title="Recebimento Título"><i class="fas fa-hand-holding-usd"></i></a>
+            
+						<a class="iconesacao tooltip edit-titulo" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/edit/108088/', '/admin/financeiro/titulo/108088/aviso/ajax/');" title="Editar Título"><i class="fas fa-edit"></i></a>
+						<a class="iconesacao tooltip titulo_detail" href="#doc108088" onclick="$('#titulo_detail').load('/admin/financeiro/titulo/view/108088/detail/');" title="Detalhes do Título"><i class="fas fa-search"></i></a>
+						<a class="iconesacao tooltip" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/cancel/108088/', '/admin/financeiro/titulo/108088/aviso/ajax/');" title="Cancelar Título"><i class="fas fa-ban"></i></a>
+					</td>
+		          </tr>
+				  
+		        
+		          <tr  data-dias="-8"
+					 data-contrato="10982">
+					<td> 
+					<input type="checkbox" name="titulos[]" class="titulosA" value="108087"/>
+					</td>	
+			          <td> 10982 </td>
+					  <td class="">
+					  115609 
+					  
+					  	- <span style="font-size: 10px; font-weight: bold;color:#05a193;">PIX</span>
+					  
+					  
+					  	- <span style="font-size: 10px; font-weight: bold;"> Reg. </span>
+					   
+					   <div class="info-acordo">
+							
+						</div>
+					  </td>
+					  <td> 07/07/2026 </td>
+					  <td class="tbold" style="color: #3d45e8;"> 
+						15/07/2026
+					  </td>					
+					  <td>   </td>
+		              <td class="tbold"> 60,00  </td>
+		              <td class="tbold"> 
+                    
+                      60,00  
+                    
+                  </td>
+					   <td class="banknegociarie">  <span style="display: none;">G14 </span></td>
+					<td> Avulso (Carnê) </td> 
+				    <td style="font-size: 10px;"> 
+				   		<a href="/admin/fiscal/nfs/titulo/create/108087/" title="Gerar Nota Fiscal"> Gerar </a> 
+				   	     
+				   	</td>
+					<td class="col-acoes">
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/print/documento/?q=108087" title="Boleto" target="_blank"><i class="fas fa-barcode"></i></a>
+                      
+                        <a class="iconesacao tooltip" href="/admin/financeiro/pix/print/documento/?q=108087" title="Imprimir Fatura PIX" target="_blank"><i class="fas fa-qrcode"></i></a>
+                      
+						<a class="iconesacao tooltip" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/get/108087/', '/admin/financeiro/titulo/108087/aviso/ajax/');" title="Recebimento Título"><i class="fas fa-hand-holding-usd"></i></a>
+            
+						<a class="iconesacao tooltip edit-titulo" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/edit/108087/', '/admin/financeiro/titulo/108087/aviso/ajax/');" title="Editar Título"><i class="fas fa-edit"></i></a>
+						<a class="iconesacao tooltip titulo_detail" href="#doc108087" onclick="$('#titulo_detail').load('/admin/financeiro/titulo/view/108087/detail/');" title="Detalhes do Título"><i class="fas fa-search"></i></a>
+						<a class="iconesacao tooltip" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/cancel/108087/', '/admin/financeiro/titulo/108087/aviso/ajax/');" title="Cancelar Título"><i class="fas fa-ban"></i></a>
+					</td>
+		          </tr>
+				  
+		        
+			</tbody>
+		</table>
+  
+	<div id="consultarnotas" style="display: none;"></div>
+   <div style="margin: 10px;">
+    <input id="printtitulodo" type="submit" value="Imprimir Boleto" class="button white"/>
+    <input id="printcarnetitulodo" type="submit" value="Imprimir Carnê" class="button orange"/>
+    <input id="printtitulopixdo" type="submit" value="Imprimir Pix" class="button green2"/>
+    <input id="liquidartitulodo" type="submit" value="Receber" class="button green"/>
+    <input id="alterartitulodo" type="submit" value="Alterar" class="button pink"/>
+    <input id="cancelartitulodo" type="submit" value="Cancelar" class="button red"/>
+    <input id="emailtitulodo" type="submit" value="Email" class="button yellow"/>
+    <input type="submit" class="button blue" data-jq-dropdown="#jq-dropdown-titulosdo" value="Outras Opções"/>
+   </div>
+   <hr class="clear invisible">
+
+      <div class="search-report-left" style="width: 400px; height: 25px;">
+        <div class="add_title_sub">
+        	   Carnê Imprimir: 
+   		<input type="checkbox" name="carne_capa"/> Capa &nbsp;
+   		<input type="checkbox" name="carne_protocolo"/> Protocolo
+        </div>
+    </div>
+	<br/>
+	</form>
+	</div>
+    <h3><a href="#">Títulos Pagos</a></h3>
+	<div style="padding: 2px;">
+	<form style="padding: 0px;" name='formtitulospagos' action="#" method="get" id="formtitulolotep" target="_blank">
+<input type='hidden' name='csrfmiddlewaretoken' value='y7AJlwHlA2HsPCU3yRh9gDLkdNpAYMwq3T4TzogrJnBDjkPkd7Aj8e8oJOpfuy3N' />
+    <div style="margin: 10px;">
+      <input id="printtitulodop" type="submit" value="Imprimir Boleto" class="button blue"/>
+      <input id="printcomprovantedo" type="submit" value="Imprimir Comprovante" class="button yellow"/>
+      <input type="submit" class="button gray" data-jq-dropdown="#jq-dropdown-titulospagosdo" value="Outras Opções"/>
+      </div>
+      <div class="search-report-left" style="width: 250px; height: 25px;">
+        <div class="add_title_sub">
+        	   Comprovante: 
+   		<input type="checkbox" name="comprovante_txt"/> Formato TXT &nbsp;
+        </div>
+    </div>
+		<table class="tablelisttituloP display">
+			<thead>
+		       <tr>
+		       	   <th width="20px"> # </th>
+		       	   <th width="75px"> Contr. </th>
+		           <th width="170px"> N. Doc. </th>
+		           <th width="90px"> Emissão </th>
+		           <th width="95px"> Vencimento </th>
+		           <th width="95px"> Pagamento </th>
+		           <th width="85px"> Valor </th>
+		           <th width="80px"> Pago </th>
+		           <th width="95px"> Desconto </th>
+				   <th width="80px"> Portador </th>
+				   <th width="140px"> Usuário </th>
+				   <th width="70px"> NF </th>
+		           <th width="270px" class="col-acoes">  </th>
+		       </tr>
+			</thead>
+			<tbody>
+		        
+		          <tr>
+		   			  <td> 
+					    <input type="checkbox" name="titulos[]" class="titulosP" value="91165"/>
+					  </td>
+					  <td> 10982 </td>
+					  <td class="">
+						98688
+						<div class="info-acordo">
+							
+						</div>
+					  </td>
+					  <td> 16/05/2025 </td>
+					  <td> 15/05/2026 </td>	
+					  <td class="tbold"> 25/05/2026 </td>	
+		              <td> 60,00  </td>
+		              <td class="tbold"> 60,00  </td>
+					  <td class="tbold"> 1,40  </td>				              
+					   <td class="bankgalaxpay">  <span style="display: none;">G09 </span></td>
+					  <td> EDVALDOSIMPLICIO </td> 
+   					    <td>  
+   					   		<a href="/admin/fiscal/nfs/titulo/create/91165/" title="Gerar Nota Fiscal"> Gerar </a> 
+   					   	     
+   					   	</td>
+					  <td class="col-acoes">
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/print/documento/?q=91165" title="Segunda via" target="_blank"><i class="fas fa-barcode"></i></a>
+						<a class="iconesacao tooltip titulo_detail" href="javascript://" onclick="$('#titulo_detail').load('/admin/financeiro/titulo/view/91165/detail/');" title="Detalhes do Título"><i class="fas fa-search"></i></a>
+						<a class="iconesacao tooltip edit-titulo" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/edit/91165/', '/admin/financeiro/titulo/91165/aviso/ajax/');" title="Editar Título"><i class="fas fa-edit"></i></a>
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/estornar/91165/" title="Estornar Título"><i class="fas fa-undo"></i></a>
+					</td>
+		          </tr>
+		        
+		          <tr>
+		   			  <td> 
+					    <input type="checkbox" name="titulos[]" class="titulosP" value="91164"/>
+					  </td>
+					  <td> 10982 </td>
+					  <td class="">
+						98687
+						<div class="info-acordo">
+							
+						</div>
+					  </td>
+					  <td> 16/05/2025 </td>
+					  <td> 15/04/2026 </td>	
+					  <td class="tbold"> 27/04/2026 </td>	
+		              <td> 60,00  </td>
+		              <td class="tbold"> 60,00  </td>
+					  <td class="tbold"> 1,44  </td>				              
+					   <td class="bankgalaxpay">  <span style="display: none;">G09 </span></td>
+					  <td> EDVALDOSIMPLICIO </td> 
+   					    <td>  
+   					   		<a href="/admin/fiscal/nfs/titulo/create/91164/" title="Gerar Nota Fiscal"> Gerar </a> 
+   					   	     
+   					   	</td>
+					  <td class="col-acoes">
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/print/documento/?q=91164" title="Segunda via" target="_blank"><i class="fas fa-barcode"></i></a>
+						<a class="iconesacao tooltip titulo_detail" href="javascript://" onclick="$('#titulo_detail').load('/admin/financeiro/titulo/view/91164/detail/');" title="Detalhes do Título"><i class="fas fa-search"></i></a>
+						<a class="iconesacao tooltip edit-titulo" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/edit/91164/', '/admin/financeiro/titulo/91164/aviso/ajax/');" title="Editar Título"><i class="fas fa-edit"></i></a>
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/estornar/91164/" title="Estornar Título"><i class="fas fa-undo"></i></a>
+					</td>
+		          </tr>
+		        
+		          <tr>
+		   			  <td> 
+					    <input type="checkbox" name="titulos[]" class="titulosP" value="91163"/>
+					  </td>
+					  <td> 10982 </td>
+					  <td class="">
+						98686
+						<div class="info-acordo">
+							
+						</div>
+					  </td>
+					  <td> 16/05/2025 </td>
+					  <td> 15/03/2026 </td>	
+					  <td class="tbold"> 23/03/2026 </td>	
+		              <td> 60,00  </td>
+		              <td class="tbold"> 60,00  </td>
+					  <td class="tbold"> 1,36  </td>				              
+					   <td class="bankgalaxpay">  <span style="display: none;">G09 </span></td>
+					  <td> EDVALDOSIMPLICIO </td> 
+   					    <td>  
+   					   		<a href="/admin/fiscal/nfs/titulo/create/91163/" title="Gerar Nota Fiscal"> Gerar </a> 
+   					   	     
+   					   	</td>
+					  <td class="col-acoes">
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/print/documento/?q=91163" title="Segunda via" target="_blank"><i class="fas fa-barcode"></i></a>
+						<a class="iconesacao tooltip titulo_detail" href="javascript://" onclick="$('#titulo_detail').load('/admin/financeiro/titulo/view/91163/detail/');" title="Detalhes do Título"><i class="fas fa-search"></i></a>
+						<a class="iconesacao tooltip edit-titulo" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/edit/91163/', '/admin/financeiro/titulo/91163/aviso/ajax/');" title="Editar Título"><i class="fas fa-edit"></i></a>
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/estornar/91163/" title="Estornar Título"><i class="fas fa-undo"></i></a>
+					</td>
+		          </tr>
+		        
+		          <tr>
+		   			  <td> 
+					    <input type="checkbox" name="titulos[]" class="titulosP" value="91162"/>
+					  </td>
+					  <td> 10982 </td>
+					  <td class="">
+						98685
+						<div class="info-acordo">
+							
+						</div>
+					  </td>
+					  <td> 16/05/2025 </td>
+					  <td> 15/02/2026 </td>	
+					  <td class="tbold"> 19/02/2026 </td>	
+		              <td> 60,00  </td>
+		              <td class="tbold"> 60,00  </td>
+					  <td class="tbold"> 1,28  </td>				              
+					   <td class="bankgalaxpay">  <span style="display: none;">G09 </span></td>
+					  <td> EDVALDOSIMPLICIO </td> 
+   					    <td>  
+   					   		<a href="/admin/fiscal/nfs/titulo/create/91162/" title="Gerar Nota Fiscal"> Gerar </a> 
+   					   	     
+   					   	</td>
+					  <td class="col-acoes">
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/print/documento/?q=91162" title="Segunda via" target="_blank"><i class="fas fa-barcode"></i></a>
+						<a class="iconesacao tooltip titulo_detail" href="javascript://" onclick="$('#titulo_detail').load('/admin/financeiro/titulo/view/91162/detail/');" title="Detalhes do Título"><i class="fas fa-search"></i></a>
+						<a class="iconesacao tooltip edit-titulo" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/edit/91162/', '/admin/financeiro/titulo/91162/aviso/ajax/');" title="Editar Título"><i class="fas fa-edit"></i></a>
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/estornar/91162/" title="Estornar Título"><i class="fas fa-undo"></i></a>
+					</td>
+		          </tr>
+		        
+		          <tr>
+		   			  <td> 
+					    <input type="checkbox" name="titulos[]" class="titulosP" value="91161"/>
+					  </td>
+					  <td> 10982 </td>
+					  <td class="">
+						98684
+						<div class="info-acordo">
+							
+						</div>
+					  </td>
+					  <td> 16/05/2025 </td>
+					  <td> 15/01/2026 </td>	
+					  <td class="tbold"> 21/01/2026 </td>	
+		              <td> 60,00  </td>
+		              <td class="tbold"> 60,00  </td>
+					  <td class="tbold"> 1,32  </td>				              
+					   <td class="bankgalaxpay">  <span style="display: none;">G09 </span></td>
+					  <td> EDVALDOSIMPLICIO </td> 
+   					    <td>  
+   					   		<a href="/admin/fiscal/nfs/titulo/create/91161/" title="Gerar Nota Fiscal"> Gerar </a> 
+   					   	     
+   					   	</td>
+					  <td class="col-acoes">
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/print/documento/?q=91161" title="Segunda via" target="_blank"><i class="fas fa-barcode"></i></a>
+						<a class="iconesacao tooltip titulo_detail" href="javascript://" onclick="$('#titulo_detail').load('/admin/financeiro/titulo/view/91161/detail/');" title="Detalhes do Título"><i class="fas fa-search"></i></a>
+						<a class="iconesacao tooltip edit-titulo" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/edit/91161/', '/admin/financeiro/titulo/91161/aviso/ajax/');" title="Editar Título"><i class="fas fa-edit"></i></a>
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/estornar/91161/" title="Estornar Título"><i class="fas fa-undo"></i></a>
+					</td>
+		          </tr>
+		        
+		          <tr>
+		   			  <td> 
+					    <input type="checkbox" name="titulos[]" class="titulosP" value="91160"/>
+					  </td>
+					  <td> 10982 </td>
+					  <td class="">
+						98683
+						<div class="info-acordo">
+							
+						</div>
+					  </td>
+					  <td> 16/05/2025 </td>
+					  <td> 15/12/2025 </td>	
+					  <td class="tbold"> 16/12/2025 </td>	
+		              <td> 60,00  </td>
+		              <td class="tbold"> 60,00  </td>
+					  <td class="tbold"> 1,22  </td>				              
+					   <td class="bankgalaxpay">  <span style="display: none;">G09 </span></td>
+					  <td> EDVALDOSIMPLICIO </td> 
+   					    <td>  
+   					   		<a href="/admin/fiscal/nfs/titulo/create/91160/" title="Gerar Nota Fiscal"> Gerar </a> 
+   					   	     
+   					   	</td>
+					  <td class="col-acoes">
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/print/documento/?q=91160" title="Segunda via" target="_blank"><i class="fas fa-barcode"></i></a>
+						<a class="iconesacao tooltip titulo_detail" href="javascript://" onclick="$('#titulo_detail').load('/admin/financeiro/titulo/view/91160/detail/');" title="Detalhes do Título"><i class="fas fa-search"></i></a>
+						<a class="iconesacao tooltip edit-titulo" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/edit/91160/', '/admin/financeiro/titulo/91160/aviso/ajax/');" title="Editar Título"><i class="fas fa-edit"></i></a>
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/estornar/91160/" title="Estornar Título"><i class="fas fa-undo"></i></a>
+					</td>
+		          </tr>
+		        
+		          <tr>
+		   			  <td> 
+					    <input type="checkbox" name="titulos[]" class="titulosP" value="91159"/>
+					  </td>
+					  <td> 10982 </td>
+					  <td class="">
+						98682
+						<div class="info-acordo">
+							
+						</div>
+					  </td>
+					  <td> 16/05/2025 </td>
+					  <td> 15/11/2025 </td>	
+					  <td class="tbold"> 26/11/2025 </td>	
+		              <td> 60,00  </td>
+		              <td class="tbold"> 60,00  </td>
+					  <td class="tbold"> 1,42  </td>				              
+					   <td class="bankgalaxpay">  <span style="display: none;">G09 </span></td>
+					  <td> EDVALDOSIMPLICIO </td> 
+   					    <td>  
+   					   		<a href="/admin/fiscal/nfs/titulo/create/91159/" title="Gerar Nota Fiscal"> Gerar </a> 
+   					   	     
+   					   	</td>
+					  <td class="col-acoes">
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/print/documento/?q=91159" title="Segunda via" target="_blank"><i class="fas fa-barcode"></i></a>
+						<a class="iconesacao tooltip titulo_detail" href="javascript://" onclick="$('#titulo_detail').load('/admin/financeiro/titulo/view/91159/detail/');" title="Detalhes do Título"><i class="fas fa-search"></i></a>
+						<a class="iconesacao tooltip edit-titulo" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/edit/91159/', '/admin/financeiro/titulo/91159/aviso/ajax/');" title="Editar Título"><i class="fas fa-edit"></i></a>
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/estornar/91159/" title="Estornar Título"><i class="fas fa-undo"></i></a>
+					</td>
+		          </tr>
+		        
+		          <tr>
+		   			  <td> 
+					    <input type="checkbox" name="titulos[]" class="titulosP" value="91158"/>
+					  </td>
+					  <td> 10982 </td>
+					  <td class="">
+						98681
+						<div class="info-acordo">
+							
+						</div>
+					  </td>
+					  <td> 16/05/2025 </td>
+					  <td> 15/10/2025 </td>	
+					  <td class="tbold"> 21/10/2025 </td>	
+		              <td> 60,00  </td>
+		              <td class="tbold"> 60,00  </td>
+					  <td class="tbold"> 1,32  </td>				              
+					   <td class="bankgalaxpay">  <span style="display: none;">G09 </span></td>
+					  <td> EDVALDOSIMPLICIO </td> 
+   					    <td>  
+   					   		<a href="/admin/fiscal/nfs/titulo/create/91158/" title="Gerar Nota Fiscal"> Gerar </a> 
+   					   	     
+   					   	</td>
+					  <td class="col-acoes">
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/print/documento/?q=91158" title="Segunda via" target="_blank"><i class="fas fa-barcode"></i></a>
+						<a class="iconesacao tooltip titulo_detail" href="javascript://" onclick="$('#titulo_detail').load('/admin/financeiro/titulo/view/91158/detail/');" title="Detalhes do Título"><i class="fas fa-search"></i></a>
+						<a class="iconesacao tooltip edit-titulo" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/edit/91158/', '/admin/financeiro/titulo/91158/aviso/ajax/');" title="Editar Título"><i class="fas fa-edit"></i></a>
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/estornar/91158/" title="Estornar Título"><i class="fas fa-undo"></i></a>
+					</td>
+		          </tr>
+		        
+		          <tr>
+		   			  <td> 
+					    <input type="checkbox" name="titulos[]" class="titulosP" value="91157"/>
+					  </td>
+					  <td> 10982 </td>
+					  <td class="">
+						98680
+						<div class="info-acordo">
+							
+						</div>
+					  </td>
+					  <td> 16/05/2025 </td>
+					  <td> 15/09/2025 </td>	
+					  <td class="tbold"> 13/08/2025 </td>	
+		              <td> 60,00  </td>
+		              <td class="tbold"> 60,00  </td>
+					  <td class="tbold"> 0,00  </td>				              
+					   <td class="bankgalaxpay">  <span style="display: none;">G09 </span></td>
+					  <td> EDVALDOSIMPLICIO </td> 
+   					    <td>  
+   					   		<a href="/admin/fiscal/nfs/titulo/create/91157/" title="Gerar Nota Fiscal"> Gerar </a> 
+   					   	     
+   					   	</td>
+					  <td class="col-acoes">
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/print/documento/?q=91157" title="Segunda via" target="_blank"><i class="fas fa-barcode"></i></a>
+						<a class="iconesacao tooltip titulo_detail" href="javascript://" onclick="$('#titulo_detail').load('/admin/financeiro/titulo/view/91157/detail/');" title="Detalhes do Título"><i class="fas fa-search"></i></a>
+						<a class="iconesacao tooltip edit-titulo" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/edit/91157/', '/admin/financeiro/titulo/91157/aviso/ajax/');" title="Editar Título"><i class="fas fa-edit"></i></a>
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/estornar/91157/" title="Estornar Título"><i class="fas fa-undo"></i></a>
+					</td>
+		          </tr>
+		        
+		          <tr>
+		   			  <td> 
+					    <input type="checkbox" name="titulos[]" class="titulosP" value="91156"/>
+					  </td>
+					  <td> 10982 </td>
+					  <td class="">
+						98679
+						<div class="info-acordo">
+							
+						</div>
+					  </td>
+					  <td> 16/05/2025 </td>
+					  <td> 15/08/2025 </td>	
+					  <td class="tbold"> 13/08/2025 </td>	
+		              <td> 60,00  </td>
+		              <td class="tbold"> 60,00  </td>
+					  <td class="tbold"> 0,00  </td>				              
+					   <td class="bankgalaxpay">  <span style="display: none;">G09 </span></td>
+					  <td> system </td> 
+   					    <td>  
+   					   		<a href="/admin/fiscal/nfs/titulo/create/91156/" title="Gerar Nota Fiscal"> Gerar </a> 
+   					   	     
+   					   	</td>
+					  <td class="col-acoes">
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/print/documento/?q=91156" title="Segunda via" target="_blank"><i class="fas fa-barcode"></i></a>
+						<a class="iconesacao tooltip titulo_detail" href="javascript://" onclick="$('#titulo_detail').load('/admin/financeiro/titulo/view/91156/detail/');" title="Detalhes do Título"><i class="fas fa-search"></i></a>
+						<a class="iconesacao tooltip edit-titulo" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/edit/91156/', '/admin/financeiro/titulo/91156/aviso/ajax/');" title="Editar Título"><i class="fas fa-edit"></i></a>
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/estornar/91156/" title="Estornar Título"><i class="fas fa-undo"></i></a>
+					</td>
+		          </tr>
+		        
+		          <tr>
+		   			  <td> 
+					    <input type="checkbox" name="titulos[]" class="titulosP" value="91155"/>
+					  </td>
+					  <td> 10982 </td>
+					  <td class="">
+						98678
+						<div class="info-acordo">
+							
+						</div>
+					  </td>
+					  <td> 16/05/2025 </td>
+					  <td> 15/07/2025 </td>	
+					  <td class="tbold"> 24/07/2025 </td>	
+		              <td> 60,00  </td>
+		              <td class="tbold"> 60,00  </td>
+					  <td class="tbold"> 1,38  </td>				              
+					   <td class="bankgalaxpay">  <span style="display: none;">G09 </span></td>
+					  <td> EDVALDOSIMPLICIO </td> 
+   					    <td>  
+   					   		<a href="/admin/fiscal/nfs/titulo/create/91155/" title="Gerar Nota Fiscal"> Gerar </a> 
+   					   	     
+   					   	</td>
+					  <td class="col-acoes">
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/print/documento/?q=91155" title="Segunda via" target="_blank"><i class="fas fa-barcode"></i></a>
+						<a class="iconesacao tooltip titulo_detail" href="javascript://" onclick="$('#titulo_detail').load('/admin/financeiro/titulo/view/91155/detail/');" title="Detalhes do Título"><i class="fas fa-search"></i></a>
+						<a class="iconesacao tooltip edit-titulo" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/edit/91155/', '/admin/financeiro/titulo/91155/aviso/ajax/');" title="Editar Título"><i class="fas fa-edit"></i></a>
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/estornar/91155/" title="Estornar Título"><i class="fas fa-undo"></i></a>
+					</td>
+		          </tr>
+		        
+		          <tr>
+		   			  <td> 
+					    <input type="checkbox" name="titulos[]" class="titulosP" value="91154"/>
+					  </td>
+					  <td> 10982 </td>
+					  <td class="">
+						98677
+						<div class="info-acordo">
+							
+						</div>
+					  </td>
+					  <td> 16/05/2025 </td>
+					  <td> 15/06/2025 </td>	
+					  <td class="tbold"> 15/06/2025 </td>	
+		              <td> 60,00  </td>
+		              <td class="tbold"> 60,00  </td>
+					  <td class="tbold"> 0,00  </td>				              
+					   <td class="bankgalaxpay">  <span style="display: none;">G09 </span></td>
+					  <td> EDVALDOSIMPLICIO </td> 
+   					    <td>  
+   					   		<a href="/admin/fiscal/nfs/titulo/create/91154/" title="Gerar Nota Fiscal"> Gerar </a> 
+   					   	     
+   					   	</td>
+					  <td class="col-acoes">
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/print/documento/?q=91154" title="Segunda via" target="_blank"><i class="fas fa-barcode"></i></a>
+						<a class="iconesacao tooltip titulo_detail" href="javascript://" onclick="$('#titulo_detail').load('/admin/financeiro/titulo/view/91154/detail/');" title="Detalhes do Título"><i class="fas fa-search"></i></a>
+						<a class="iconesacao tooltip edit-titulo" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/edit/91154/', '/admin/financeiro/titulo/91154/aviso/ajax/');" title="Editar Título"><i class="fas fa-edit"></i></a>
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/estornar/91154/" title="Estornar Título"><i class="fas fa-undo"></i></a>
+					</td>
+		          </tr>
+		        
+		          <tr>
+		   			  <td> 
+					    <input type="checkbox" name="titulos[]" class="titulosP" value="76766"/>
+					  </td>
+					  <td> 10982 </td>
+					  <td class="">
+						84289
+						<div class="info-acordo">
+							
+						</div>
+					  </td>
+					  <td> 03/05/2024 </td>
+					  <td> 30/04/2025 </td>	
+					  <td class="tbold"> 16/05/2025 </td>	
+		              <td> 60,00  </td>
+		              <td class="tbold"> 60,00  </td>
+					  <td class="tbold"> 1,52  </td>				              
+					   <td class="bankgalaxpay">  <span style="display: none;">G09 </span></td>
+					  <td> EDVALDOSIMPLICIO </td> 
+   					    <td>  
+   					   		<a href="/admin/fiscal/nfs/titulo/create/76766/" title="Gerar Nota Fiscal"> Gerar </a> 
+   					   	     
+   					   	</td>
+					  <td class="col-acoes">
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/print/documento/?q=76766" title="Segunda via" target="_blank"><i class="fas fa-barcode"></i></a>
+						<a class="iconesacao tooltip titulo_detail" href="javascript://" onclick="$('#titulo_detail').load('/admin/financeiro/titulo/view/76766/detail/');" title="Detalhes do Título"><i class="fas fa-search"></i></a>
+						<a class="iconesacao tooltip edit-titulo" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/edit/76766/', '/admin/financeiro/titulo/76766/aviso/ajax/');" title="Editar Título"><i class="fas fa-edit"></i></a>
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/estornar/76766/" title="Estornar Título"><i class="fas fa-undo"></i></a>
+					</td>
+		          </tr>
+		        
+		          <tr>
+		   			  <td> 
+					    <input type="checkbox" name="titulos[]" class="titulosP" value="76765"/>
+					  </td>
+					  <td> 10982 </td>
+					  <td class="">
+						84288
+						<div class="info-acordo">
+							
+						</div>
+					  </td>
+					  <td> 03/05/2024 </td>
+					  <td> 30/03/2025 </td>	
+					  <td class="tbold"> 16/04/2025 </td>	
+		              <td> 60,00  </td>
+		              <td class="tbold"> 60,00  </td>
+					  <td class="tbold"> 1,54  </td>				              
+					   <td class="bankgalaxpay">  <span style="display: none;">G09 </span></td>
+					  <td> EDVALDOSIMPLICIO </td> 
+   					    <td>  
+   					   		<a href="/admin/fiscal/nfs/titulo/create/76765/" title="Gerar Nota Fiscal"> Gerar </a> 
+   					   	     
+   					   	</td>
+					  <td class="col-acoes">
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/print/documento/?q=76765" title="Segunda via" target="_blank"><i class="fas fa-barcode"></i></a>
+						<a class="iconesacao tooltip titulo_detail" href="javascript://" onclick="$('#titulo_detail').load('/admin/financeiro/titulo/view/76765/detail/');" title="Detalhes do Título"><i class="fas fa-search"></i></a>
+						<a class="iconesacao tooltip edit-titulo" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/edit/76765/', '/admin/financeiro/titulo/76765/aviso/ajax/');" title="Editar Título"><i class="fas fa-edit"></i></a>
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/estornar/76765/" title="Estornar Título"><i class="fas fa-undo"></i></a>
+					</td>
+		          </tr>
+		        
+		          <tr>
+		   			  <td> 
+					    <input type="checkbox" name="titulos[]" class="titulosP" value="76764"/>
+					  </td>
+					  <td> 10982 </td>
+					  <td class="">
+						84287
+						<div class="info-acordo">
+							
+						</div>
+					  </td>
+					  <td> 03/05/2024 </td>
+					  <td> 28/02/2025 </td>	
+					  <td class="tbold"> 17/03/2025 </td>	
+		              <td> 60,00  </td>
+		              <td class="tbold"> 60,00  </td>
+					  <td class="tbold"> 1,54  </td>				              
+					   <td class="bankgalaxpay">  <span style="display: none;">G09 </span></td>
+					  <td> EDVALDOSIMPLICIO </td> 
+   					    <td>  
+   					   		<a href="/admin/fiscal/nfs/titulo/create/76764/" title="Gerar Nota Fiscal"> Gerar </a> 
+   					   	     
+   					   	</td>
+					  <td class="col-acoes">
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/print/documento/?q=76764" title="Segunda via" target="_blank"><i class="fas fa-barcode"></i></a>
+						<a class="iconesacao tooltip titulo_detail" href="javascript://" onclick="$('#titulo_detail').load('/admin/financeiro/titulo/view/76764/detail/');" title="Detalhes do Título"><i class="fas fa-search"></i></a>
+						<a class="iconesacao tooltip edit-titulo" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/edit/76764/', '/admin/financeiro/titulo/76764/aviso/ajax/');" title="Editar Título"><i class="fas fa-edit"></i></a>
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/estornar/76764/" title="Estornar Título"><i class="fas fa-undo"></i></a>
+					</td>
+		          </tr>
+		        
+		          <tr>
+		   			  <td> 
+					    <input type="checkbox" name="titulos[]" class="titulosP" value="76763"/>
+					  </td>
+					  <td> 10982 </td>
+					  <td class="">
+						84286
+						<div class="info-acordo">
+							
+						</div>
+					  </td>
+					  <td> 03/05/2024 </td>
+					  <td> 30/01/2025 </td>	
+					  <td class="tbold"> 21/02/2025 </td>	
+		              <td> 60,00  </td>
+		              <td class="tbold"> 60,00  </td>
+					  <td class="tbold"> 1,64  </td>				              
+					   <td class="bankgalaxpay">  <span style="display: none;">G09 </span></td>
+					  <td> EDVALDOSIMPLICIO </td> 
+   					    <td>  
+   					   		<a href="/admin/fiscal/nfs/titulo/create/76763/" title="Gerar Nota Fiscal"> Gerar </a> 
+   					   	     
+   					   	</td>
+					  <td class="col-acoes">
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/print/documento/?q=76763" title="Segunda via" target="_blank"><i class="fas fa-barcode"></i></a>
+						<a class="iconesacao tooltip titulo_detail" href="javascript://" onclick="$('#titulo_detail').load('/admin/financeiro/titulo/view/76763/detail/');" title="Detalhes do Título"><i class="fas fa-search"></i></a>
+						<a class="iconesacao tooltip edit-titulo" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/edit/76763/', '/admin/financeiro/titulo/76763/aviso/ajax/');" title="Editar Título"><i class="fas fa-edit"></i></a>
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/estornar/76763/" title="Estornar Título"><i class="fas fa-undo"></i></a>
+					</td>
+		          </tr>
+		        
+		          <tr>
+		   			  <td> 
+					    <input type="checkbox" name="titulos[]" class="titulosP" value="76762"/>
+					  </td>
+					  <td> 10982 </td>
+					  <td class="">
+						84285
+						<div class="info-acordo">
+							
+						</div>
+					  </td>
+					  <td> 03/05/2024 </td>
+					  <td> 30/12/2024 </td>	
+					  <td class="tbold"> 20/01/2025 </td>	
+		              <td> 60,00  </td>
+		              <td class="tbold"> 60,00  </td>
+					  <td class="tbold"> 1,62  </td>				              
+					   <td class="bankgalaxpay">  <span style="display: none;">G09 </span></td>
+					  <td> EDVALDOSIMPLICIO </td> 
+   					    <td>  
+   					   		<a href="/admin/fiscal/nfs/titulo/create/76762/" title="Gerar Nota Fiscal"> Gerar </a> 
+   					   	     
+   					   	</td>
+					  <td class="col-acoes">
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/print/documento/?q=76762" title="Segunda via" target="_blank"><i class="fas fa-barcode"></i></a>
+						<a class="iconesacao tooltip titulo_detail" href="javascript://" onclick="$('#titulo_detail').load('/admin/financeiro/titulo/view/76762/detail/');" title="Detalhes do Título"><i class="fas fa-search"></i></a>
+						<a class="iconesacao tooltip edit-titulo" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/edit/76762/', '/admin/financeiro/titulo/76762/aviso/ajax/');" title="Editar Título"><i class="fas fa-edit"></i></a>
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/estornar/76762/" title="Estornar Título"><i class="fas fa-undo"></i></a>
+					</td>
+		          </tr>
+		        
+		          <tr>
+		   			  <td> 
+					    <input type="checkbox" name="titulos[]" class="titulosP" value="76761"/>
+					  </td>
+					  <td> 10982 </td>
+					  <td class="">
+						84284
+						<div class="info-acordo">
+							
+						</div>
+					  </td>
+					  <td> 03/05/2024 </td>
+					  <td> 30/11/2024 </td>	
+					  <td class="tbold"> 16/12/2024 </td>	
+		              <td> 60,00  </td>
+		              <td class="tbold"> 60,00  </td>
+					  <td class="tbold"> 1,52  </td>				              
+					   <td class="bankgalaxpay">  <span style="display: none;">G09 </span></td>
+					  <td> EDVALDOSIMPLICIO </td> 
+   					    <td>  
+   					   		<a href="/admin/fiscal/nfs/titulo/create/76761/" title="Gerar Nota Fiscal"> Gerar </a> 
+   					   	     
+   					   	</td>
+					  <td class="col-acoes">
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/print/documento/?q=76761" title="Segunda via" target="_blank"><i class="fas fa-barcode"></i></a>
+						<a class="iconesacao tooltip titulo_detail" href="javascript://" onclick="$('#titulo_detail').load('/admin/financeiro/titulo/view/76761/detail/');" title="Detalhes do Título"><i class="fas fa-search"></i></a>
+						<a class="iconesacao tooltip edit-titulo" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/edit/76761/', '/admin/financeiro/titulo/76761/aviso/ajax/');" title="Editar Título"><i class="fas fa-edit"></i></a>
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/estornar/76761/" title="Estornar Título"><i class="fas fa-undo"></i></a>
+					</td>
+		          </tr>
+		        
+		          <tr>
+		   			  <td> 
+					    <input type="checkbox" name="titulos[]" class="titulosP" value="69961"/>
+					  </td>
+					  <td> 10982 </td>
+					  <td class="">
+						77484
+						<div class="info-acordo">
+							
+						</div>
+					  </td>
+					  <td> 30/11/2023 </td>
+					  <td> 30/10/2024 </td>	
+					  <td class="tbold"> 19/11/2024 </td>	
+		              <td> 60,00  </td>
+		              <td class="tbold"> 60,00  </td>
+					  <td class="tbold"> 1,60  </td>				              
+					   <td class="bankgalaxpay">  <span style="display: none;">G09 </span></td>
+					  <td> EDVALDOSIMPLICIO </td> 
+   					    <td>  
+   					   		<a href="/admin/fiscal/nfs/titulo/create/69961/" title="Gerar Nota Fiscal"> Gerar </a> 
+   					   	     
+   					   	</td>
+					  <td class="col-acoes">
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/print/documento/?q=69961" title="Segunda via" target="_blank"><i class="fas fa-barcode"></i></a>
+						<a class="iconesacao tooltip titulo_detail" href="javascript://" onclick="$('#titulo_detail').load('/admin/financeiro/titulo/view/69961/detail/');" title="Detalhes do Título"><i class="fas fa-search"></i></a>
+						<a class="iconesacao tooltip edit-titulo" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/edit/69961/', '/admin/financeiro/titulo/69961/aviso/ajax/');" title="Editar Título"><i class="fas fa-edit"></i></a>
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/estornar/69961/" title="Estornar Título"><i class="fas fa-undo"></i></a>
+					</td>
+		          </tr>
+		        
+		          <tr>
+		   			  <td> 
+					    <input type="checkbox" name="titulos[]" class="titulosP" value="69960"/>
+					  </td>
+					  <td> 10982 </td>
+					  <td class="">
+						77483
+						<div class="info-acordo">
+							
+						</div>
+					  </td>
+					  <td> 30/11/2023 </td>
+					  <td> 30/09/2024 </td>	
+					  <td class="tbold"> 15/10/2024 </td>	
+		              <td> 60,00  </td>
+		              <td class="tbold"> 60,00  </td>
+					  <td class="tbold"> 1,50  </td>				              
+					   <td class="bankgalaxpay">  <span style="display: none;">G09 </span></td>
+					  <td> EDVALDOSIMPLICIO </td> 
+   					    <td>  
+   					   		<a href="/admin/fiscal/nfs/titulo/create/69960/" title="Gerar Nota Fiscal"> Gerar </a> 
+   					   	     
+   					   	</td>
+					  <td class="col-acoes">
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/print/documento/?q=69960" title="Segunda via" target="_blank"><i class="fas fa-barcode"></i></a>
+						<a class="iconesacao tooltip titulo_detail" href="javascript://" onclick="$('#titulo_detail').load('/admin/financeiro/titulo/view/69960/detail/');" title="Detalhes do Título"><i class="fas fa-search"></i></a>
+						<a class="iconesacao tooltip edit-titulo" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/edit/69960/', '/admin/financeiro/titulo/69960/aviso/ajax/');" title="Editar Título"><i class="fas fa-edit"></i></a>
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/estornar/69960/" title="Estornar Título"><i class="fas fa-undo"></i></a>
+					</td>
+		          </tr>
+		        
+		          <tr>
+		   			  <td> 
+					    <input type="checkbox" name="titulos[]" class="titulosP" value="69959"/>
+					  </td>
+					  <td> 10982 </td>
+					  <td class="">
+						77482
+						<div class="info-acordo">
+							
+						</div>
+					  </td>
+					  <td> 30/11/2023 </td>
+					  <td> 30/08/2024 </td>	
+					  <td class="tbold"> 16/09/2024 </td>	
+		              <td> 60,00  </td>
+		              <td class="tbold"> 61,54  </td>
+					  <td class="tbold"> 0,00  </td>				              
+					   <td class="bankgalaxpay">  <span style="display: none;">G09 </span></td>
+					  <td> system </td> 
+   					    <td>  
+   					   		<a href="/admin/fiscal/nfs/titulo/create/69959/" title="Gerar Nota Fiscal"> Gerar </a> 
+   					   	     
+   					   	</td>
+					  <td class="col-acoes">
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/print/documento/?q=69959" title="Segunda via" target="_blank"><i class="fas fa-barcode"></i></a>
+						<a class="iconesacao tooltip titulo_detail" href="javascript://" onclick="$('#titulo_detail').load('/admin/financeiro/titulo/view/69959/detail/');" title="Detalhes do Título"><i class="fas fa-search"></i></a>
+						<a class="iconesacao tooltip edit-titulo" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/edit/69959/', '/admin/financeiro/titulo/69959/aviso/ajax/');" title="Editar Título"><i class="fas fa-edit"></i></a>
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/estornar/69959/" title="Estornar Título"><i class="fas fa-undo"></i></a>
+					</td>
+		          </tr>
+		        
+		          <tr>
+		   			  <td> 
+					    <input type="checkbox" name="titulos[]" class="titulosP" value="69958"/>
+					  </td>
+					  <td> 10982 </td>
+					  <td class="">
+						77481
+						<div class="info-acordo">
+							
+						</div>
+					  </td>
+					  <td> 30/11/2023 </td>
+					  <td> 30/07/2024 </td>	
+					  <td class="tbold"> 07/08/2024 </td>	
+		              <td> 60,00  </td>
+		              <td class="tbold"> 61,36  </td>
+					  <td class="tbold"> 0,00  </td>				              
+					   <td class="bankgalaxpay">  <span style="display: none;">G09 </span></td>
+					  <td> EDVALDOSIMPLICIO </td> 
+   					    <td>  
+   					   		<a href="/admin/fiscal/nfs/titulo/create/69958/" title="Gerar Nota Fiscal"> Gerar </a> 
+   					   	     
+   					   	</td>
+					  <td class="col-acoes">
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/print/documento/?q=69958" title="Segunda via" target="_blank"><i class="fas fa-barcode"></i></a>
+						<a class="iconesacao tooltip titulo_detail" href="javascript://" onclick="$('#titulo_detail').load('/admin/financeiro/titulo/view/69958/detail/');" title="Detalhes do Título"><i class="fas fa-search"></i></a>
+						<a class="iconesacao tooltip edit-titulo" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/edit/69958/', '/admin/financeiro/titulo/69958/aviso/ajax/');" title="Editar Título"><i class="fas fa-edit"></i></a>
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/estornar/69958/" title="Estornar Título"><i class="fas fa-undo"></i></a>
+					</td>
+		          </tr>
+		        
+		          <tr>
+		   			  <td> 
+					    <input type="checkbox" name="titulos[]" class="titulosP" value="69957"/>
+					  </td>
+					  <td> 10982 </td>
+					  <td class="">
+						77480
+						<div class="info-acordo">
+							
+						</div>
+					  </td>
+					  <td> 30/11/2023 </td>
+					  <td> 30/06/2024 </td>	
+					  <td class="tbold"> 07/08/2024 </td>	
+		              <td> 60,00  </td>
+		              <td class="tbold"> 61,96  </td>
+					  <td class="tbold"> 0,00  </td>				              
+					   <td class="bankgalaxpay">  <span style="display: none;">G09 </span></td>
+					  <td> EDVALDOSIMPLICIO </td> 
+   					    <td>  
+   					   		<a href="/admin/fiscal/nfs/titulo/create/69957/" title="Gerar Nota Fiscal"> Gerar </a> 
+   					   	     
+   					   	</td>
+					  <td class="col-acoes">
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/print/documento/?q=69957" title="Segunda via" target="_blank"><i class="fas fa-barcode"></i></a>
+						<a class="iconesacao tooltip titulo_detail" href="javascript://" onclick="$('#titulo_detail').load('/admin/financeiro/titulo/view/69957/detail/');" title="Detalhes do Título"><i class="fas fa-search"></i></a>
+						<a class="iconesacao tooltip edit-titulo" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/edit/69957/', '/admin/financeiro/titulo/69957/aviso/ajax/');" title="Editar Título"><i class="fas fa-edit"></i></a>
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/estornar/69957/" title="Estornar Título"><i class="fas fa-undo"></i></a>
+					</td>
+		          </tr>
+		        
+		          <tr>
+		   			  <td> 
+					    <input type="checkbox" name="titulos[]" class="titulosP" value="69956"/>
+					  </td>
+					  <td> 10982 </td>
+					  <td class="">
+						77479
+						<div class="info-acordo">
+							
+						</div>
+					  </td>
+					  <td> 30/11/2023 </td>
+					  <td> 30/05/2024 </td>	
+					  <td class="tbold"> 05/06/2024 </td>	
+		              <td> 60,00  </td>
+		              <td class="tbold"> 60,00  </td>
+					  <td class="tbold"> 1,32  </td>				              
+					   <td class="bankgalaxpay">  <span style="display: none;">G09 </span></td>
+					  <td> EDVALDOSIMPLICIO </td> 
+   					    <td>  
+   					   		<a href="/admin/fiscal/nfs/titulo/create/69956/" title="Gerar Nota Fiscal"> Gerar </a> 
+   					   	     
+   					   	</td>
+					  <td class="col-acoes">
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/print/documento/?q=69956" title="Segunda via" target="_blank"><i class="fas fa-barcode"></i></a>
+						<a class="iconesacao tooltip titulo_detail" href="javascript://" onclick="$('#titulo_detail').load('/admin/financeiro/titulo/view/69956/detail/');" title="Detalhes do Título"><i class="fas fa-search"></i></a>
+						<a class="iconesacao tooltip edit-titulo" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/edit/69956/', '/admin/financeiro/titulo/69956/aviso/ajax/');" title="Editar Título"><i class="fas fa-edit"></i></a>
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/estornar/69956/" title="Estornar Título"><i class="fas fa-undo"></i></a>
+					</td>
+		          </tr>
+		        
+		          <tr>
+		   			  <td> 
+					    <input type="checkbox" name="titulos[]" class="titulosP" value="69955"/>
+					  </td>
+					  <td> 10982 </td>
+					  <td class="">
+						77478
+						<div class="info-acordo">
+							
+						</div>
+					  </td>
+					  <td> 30/11/2023 </td>
+					  <td> 30/04/2024 </td>	
+					  <td class="tbold"> 13/05/2024 </td>	
+		              <td> 60,00  </td>
+		              <td class="tbold"> 60,00  </td>
+					  <td class="tbold"> 1,46  </td>				              
+					   <td class="bankgalaxpay">  <span style="display: none;">G09 </span></td>
+					  <td> EDVALDOSIMPLICIO </td> 
+   					    <td>  
+   					   		<a href="/admin/fiscal/nfs/titulo/create/69955/" title="Gerar Nota Fiscal"> Gerar </a> 
+   					   	     
+   					   	</td>
+					  <td class="col-acoes">
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/print/documento/?q=69955" title="Segunda via" target="_blank"><i class="fas fa-barcode"></i></a>
+						<a class="iconesacao tooltip titulo_detail" href="javascript://" onclick="$('#titulo_detail').load('/admin/financeiro/titulo/view/69955/detail/');" title="Detalhes do Título"><i class="fas fa-search"></i></a>
+						<a class="iconesacao tooltip edit-titulo" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/edit/69955/', '/admin/financeiro/titulo/69955/aviso/ajax/');" title="Editar Título"><i class="fas fa-edit"></i></a>
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/estornar/69955/" title="Estornar Título"><i class="fas fa-undo"></i></a>
+					</td>
+		          </tr>
+		        
+		          <tr>
+		   			  <td> 
+					    <input type="checkbox" name="titulos[]" class="titulosP" value="69954"/>
+					  </td>
+					  <td> 10982 </td>
+					  <td class="">
+						77477
+						<div class="info-acordo">
+							
+						</div>
+					  </td>
+					  <td> 30/11/2023 </td>
+					  <td> 30/03/2024 </td>	
+					  <td class="tbold"> 08/04/2024 </td>	
+		              <td> 60,00  </td>
+		              <td class="tbold"> 60,00  </td>
+					  <td class="tbold"> 1,38  </td>				              
+					   <td class="bankgalaxpay">  <span style="display: none;">G09 </span></td>
+					  <td> EDVALDOSIMPLICIO </td> 
+   					    <td>  
+   					   		<a href="/admin/fiscal/nfs/titulo/create/69954/" title="Gerar Nota Fiscal"> Gerar </a> 
+   					   	     
+   					   	</td>
+					  <td class="col-acoes">
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/print/documento/?q=69954" title="Segunda via" target="_blank"><i class="fas fa-barcode"></i></a>
+						<a class="iconesacao tooltip titulo_detail" href="javascript://" onclick="$('#titulo_detail').load('/admin/financeiro/titulo/view/69954/detail/');" title="Detalhes do Título"><i class="fas fa-search"></i></a>
+						<a class="iconesacao tooltip edit-titulo" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/edit/69954/', '/admin/financeiro/titulo/69954/aviso/ajax/');" title="Editar Título"><i class="fas fa-edit"></i></a>
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/estornar/69954/" title="Estornar Título"><i class="fas fa-undo"></i></a>
+					</td>
+		          </tr>
+		        
+		          <tr>
+		   			  <td> 
+					    <input type="checkbox" name="titulos[]" class="titulosP" value="69953"/>
+					  </td>
+					  <td> 10982 </td>
+					  <td class="">
+						77476
+						<div class="info-acordo">
+							
+						</div>
+					  </td>
+					  <td> 30/11/2023 </td>
+					  <td> 29/02/2024 </td>	
+					  <td class="tbold"> 07/03/2024 </td>	
+		              <td> 60,00  </td>
+		              <td class="tbold"> 61,34  </td>
+					  <td class="tbold"> 0,00  </td>				              
+					   <td class="bankgalaxpay">  <span style="display: none;">G09 </span></td>
+					  <td> system </td> 
+   					    <td>  
+   					   		<a href="/admin/fiscal/nfs/titulo/create/69953/" title="Gerar Nota Fiscal"> Gerar </a> 
+   					   	     
+   					   	</td>
+					  <td class="col-acoes">
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/print/documento/?q=69953" title="Segunda via" target="_blank"><i class="fas fa-barcode"></i></a>
+						<a class="iconesacao tooltip titulo_detail" href="javascript://" onclick="$('#titulo_detail').load('/admin/financeiro/titulo/view/69953/detail/');" title="Detalhes do Título"><i class="fas fa-search"></i></a>
+						<a class="iconesacao tooltip edit-titulo" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/edit/69953/', '/admin/financeiro/titulo/69953/aviso/ajax/');" title="Editar Título"><i class="fas fa-edit"></i></a>
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/estornar/69953/" title="Estornar Título"><i class="fas fa-undo"></i></a>
+					</td>
+		          </tr>
+		        
+		          <tr>
+		   			  <td> 
+					    <input type="checkbox" name="titulos[]" class="titulosP" value="69952"/>
+					  </td>
+					  <td> 10982 </td>
+					  <td class="">
+						77475
+						<div class="info-acordo">
+							
+						</div>
+					  </td>
+					  <td> 30/11/2023 </td>
+					  <td> 30/01/2024 </td>	
+					  <td class="tbold"> 07/02/2024 </td>	
+		              <td> 60,00  </td>
+		              <td class="tbold"> 61,34  </td>
+					  <td class="tbold"> 0,00  </td>				              
+					   <td class="bankgalaxpay">  <span style="display: none;">G09 </span></td>
+					  <td> system </td> 
+   					    <td>  
+   					   		<a href="/admin/fiscal/nfs/titulo/create/69952/" title="Gerar Nota Fiscal"> Gerar </a> 
+   					   	     
+   					   	</td>
+					  <td class="col-acoes">
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/print/documento/?q=69952" title="Segunda via" target="_blank"><i class="fas fa-barcode"></i></a>
+						<a class="iconesacao tooltip titulo_detail" href="javascript://" onclick="$('#titulo_detail').load('/admin/financeiro/titulo/view/69952/detail/');" title="Detalhes do Título"><i class="fas fa-search"></i></a>
+						<a class="iconesacao tooltip edit-titulo" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/edit/69952/', '/admin/financeiro/titulo/69952/aviso/ajax/');" title="Editar Título"><i class="fas fa-edit"></i></a>
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/estornar/69952/" title="Estornar Título"><i class="fas fa-undo"></i></a>
+					</td>
+		          </tr>
+		        
+		          <tr>
+		   			  <td> 
+					    <input type="checkbox" name="titulos[]" class="titulosP" value="69951"/>
+					  </td>
+					  <td> 10982 </td>
+					  <td class="">
+						77474
+						<div class="info-acordo">
+							
+						</div>
+					  </td>
+					  <td> 30/11/2023 </td>
+					  <td> 30/12/2023 </td>	
+					  <td class="tbold"> 08/01/2024 </td>	
+		              <td> 60,00  </td>
+		              <td class="tbold"> 61,32  </td>
+					  <td class="tbold"> 0,00  </td>				              
+					   <td class="bankgalaxpay">  <span style="display: none;">G09 </span></td>
+					  <td> system </td> 
+   					    <td>  
+   					   		<a href="/admin/fiscal/nfs/titulo/create/69951/" title="Gerar Nota Fiscal"> Gerar </a> 
+   					   	     
+   					   	</td>
+					  <td class="col-acoes">
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/print/documento/?q=69951" title="Segunda via" target="_blank"><i class="fas fa-barcode"></i></a>
+						<a class="iconesacao tooltip titulo_detail" href="javascript://" onclick="$('#titulo_detail').load('/admin/financeiro/titulo/view/69951/detail/');" title="Detalhes do Título"><i class="fas fa-search"></i></a>
+						<a class="iconesacao tooltip edit-titulo" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/edit/69951/', '/admin/financeiro/titulo/69951/aviso/ajax/');" title="Editar Título"><i class="fas fa-edit"></i></a>
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/estornar/69951/" title="Estornar Título"><i class="fas fa-undo"></i></a>
+					</td>
+		          </tr>
+		        
+		          <tr>
+		   			  <td> 
+					    <input type="checkbox" name="titulos[]" class="titulosP" value="69950"/>
+					  </td>
+					  <td> 10982 </td>
+					  <td class="">
+						77473
+						<div class="info-acordo">
+							
+						</div>
+					  </td>
+					  <td> 30/11/2023 </td>
+					  <td> 30/11/2023 </td>	
+					  <td class="tbold"> 30/11/2023 </td>	
+		              <td> 60,00  </td>
+		              <td class="tbold"> 60,00  </td>
+					  <td class="tbold"> 0,00  </td>				              
+					   <td class="bankgalaxpay">  <span style="display: none;">G09 </span></td>
+					  <td> EDVALDOSIMPLICIO </td> 
+   					    <td>  
+   					   		<a href="/admin/fiscal/nfs/titulo/create/69950/" title="Gerar Nota Fiscal"> Gerar </a> 
+   					   	     
+   					   	</td>
+					  <td class="col-acoes">
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/print/documento/?q=69950" title="Segunda via" target="_blank"><i class="fas fa-barcode"></i></a>
+						<a class="iconesacao tooltip titulo_detail" href="javascript://" onclick="$('#titulo_detail').load('/admin/financeiro/titulo/view/69950/detail/');" title="Detalhes do Título"><i class="fas fa-search"></i></a>
+						<a class="iconesacao tooltip edit-titulo" href="#" onclick="tituloAvisoConfirm('/admin/financeiro/titulo/edit/69950/', '/admin/financeiro/titulo/69950/aviso/ajax/');" title="Editar Título"><i class="fas fa-edit"></i></a>
+						<a class="iconesacao tooltip" href="/admin/financeiro/titulo/estornar/69950/" title="Estornar Título"><i class="fas fa-undo"></i></a>
+					</td>
+		          </tr>
+		        
+			</tbody>
+		</table>
+  </form>
+		 <br/>
+	</div>
+	<h3><a href="#">Títulos Cancelados</a></h3>
+	<div style="padding: 2px;">
+		<table class="tablelisttituloC display">
+			<thead>
+		       <tr>
+		           <th width="75px"> Contr. </th>
+		           <th width="170px"> N. Doc </th>
+		           <th width="90px"> Emissão </th>
+		           <th width="95px"> Vencimento </th>
+		           <th width="110px"> Cancelamento </th>
+				   <th width="140px"> Usuário </th>
+		           <th width="85px"> Valor </th>
+				   <th width="80px"> Portador </th>
+		           <th width="270px" class="col-acoes"> &nbsp; </th>
+		       </tr>
+			</thead>
+			<tbody>
+		        
+			</tbody>
+		</table>
+		<br/>
+	</div>
+</div>
+
+</div>
+

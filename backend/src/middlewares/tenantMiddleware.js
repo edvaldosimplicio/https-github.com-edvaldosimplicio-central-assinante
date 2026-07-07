@@ -1,5 +1,5 @@
 async function tenantMiddleware(req, res, next) {
-  const provedorId = req.headers["x-provedor-id"] || req.query.provedor_id;
+  const provedorId = req.provedorId || req.headers["x-provedor-id"] || req.query.provedor_id;
 
   if (!provedorId) {
     return res.status(400).json({ error: "Identificador do provedor não informado" });

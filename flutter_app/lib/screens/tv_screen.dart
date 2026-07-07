@@ -40,7 +40,7 @@ class _TvScreenState extends State<TvScreen> with SingleTickerProviderStateMixin
     try {
       final auth = context.read<AuthProvider>();
       final api = ApiService(
-        baseUrl: 'http://localhost:3000/api',
+        baseUrl: 'http://38.250.217.82:3000/api',
         token: auth.token,
         provedorId: auth.provedorConfig?.slug,
       );
