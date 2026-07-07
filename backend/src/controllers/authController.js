@@ -3,7 +3,7 @@ const AuthService = require("../services/authService");
 class AuthController {
   async login(req, res) {
     try {
-      const { cpf_cnpj, cpf, provider_slug } = req.body;
+      const { cpf_cnpj, cpf, provider_slug, provedor_slug } = req.body;
       const cleanCpf = (cpf_cnpj || cpf || "").replace(/\D/g, "");
 
       if (!cleanCpf) {
@@ -11,7 +11,7 @@ class AuthController {
       }
 
       const authService = new AuthService(req.prisma);
-      const result = await authService.login(cleanCpf, provider_slug);
+      const result = await authService.login(cleanCpf, provider_slug || provedor_slug);
 
       if (!result.sucesso) {
         return res.status(401).json({ error: result.erro });
