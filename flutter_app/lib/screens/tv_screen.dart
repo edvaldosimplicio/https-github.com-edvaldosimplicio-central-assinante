@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '../core/app_config.dart';
 import '../providers/auth_provider.dart';
 import '../services/api_service.dart';
 import '../services/iptv_service.dart';
@@ -40,7 +41,7 @@ class _TvScreenState extends State<TvScreen> with SingleTickerProviderStateMixin
     try {
       final auth = context.read<AuthProvider>();
       final api = ApiService(
-        baseUrl: 'http://38.250.217.82:3000/api',
+        baseUrl: AppConfig.defaultBaseUrl,
         token: auth.token,
         provedorId: auth.provedorConfig?.slug,
       );

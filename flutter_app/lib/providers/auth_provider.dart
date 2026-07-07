@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import '../core/app_config.dart';
 import '../models/usuario_model.dart';
 import '../services/api_service.dart';
 import '../services/auth_service.dart';
@@ -23,8 +23,7 @@ class AuthProvider extends ChangeNotifier {
   bool get initialized => _initialized;
 
   Future<void> initialize() async {
-    final prefs = await SharedPreferences.getInstance();
-    final baseUrl = prefs.getString('api_base_url') ?? 'http://38.250.217.82:3000/api';
+    final baseUrl = await AppConfig.getBaseUrl();
     final api = ApiService(baseUrl: baseUrl);
     _authService = AuthService(api);
 
@@ -47,7 +46,9 @@ class AuthProvider extends ChangeNotifier {
     _error = null;
     notifyListeners();
 
-    provedorSlug ??= 'redemeganet';
+    if (provedorSlug == null) {
+      provedorSlug = await AppConfig.getSlug();
+    }
 
     try {
       final response = await _authService!.login(cpfCnpj, provedorSlug);

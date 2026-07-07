@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
+import 'core/app_config.dart';
 import 'providers/auth_provider.dart';
 import 'providers/home_provider.dart';
 import 'screens/login_screen.dart';
@@ -29,11 +30,11 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (_) => AuthProvider()..initialize()),
         ChangeNotifierProxyProvider<AuthProvider, HomeProvider>(
-          create: (_) => HomeProvider(ApiService(baseUrl: 'http://38.250.217.82:3000/api')),
+          create: (_) => HomeProvider(ApiService(baseUrl: AppConfig.defaultBaseUrl)),
           update: (context, auth, previous) {
             if (auth.isLoggedIn) {
               final api = ApiService(
-                baseUrl: 'http://38.250.217.82:3000/api',
+                baseUrl: AppConfig.defaultBaseUrl,
                 token: auth.token,
                 provedorId: auth.provedorConfig?.slug,
               );
@@ -43,7 +44,7 @@ class MyApp extends StatelessWidget {
               }
               return provider;
             }
-            return previous ?? HomeProvider(ApiService(baseUrl: 'http://38.250.217.82:3000/api'));
+            return previous ?? HomeProvider(ApiService(baseUrl: AppConfig.defaultBaseUrl));
           },
         ),
       ],
