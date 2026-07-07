@@ -47,6 +47,8 @@ class AuthProvider extends ChangeNotifier {
     _error = null;
     notifyListeners();
 
+    provedorSlug ??= 'redemeganet';
+
     try {
       final response = await _authService!.login(cpfCnpj, provedorSlug);
 
