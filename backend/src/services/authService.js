@@ -102,9 +102,9 @@ class AuthService {
     } catch (e) {
       console.warn("Erro ao conectar ao ERP, usando dados de fallback locais:", e.message);
       dadosCliente = {
-        nome: usuario.nome || "Cliente Exemplo",
+        nome: usuario.nome || "Cliente",
         cpfCnpj: usuario.cpfCnpj,
-        email: "cliente.exemplo@provedor.com.br",
+        email: usuario.email || "",
       };
     }
 

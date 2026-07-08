@@ -3,8 +3,8 @@ const AuthService = require("../services/authService");
 class AuthController {
   async login(req, res) {
     try {
-      const { cpf_cnpj, cpf, provider_slug, provedor_slug } = req.body;
-      const cleanCpf = (cpf_cnpj || cpf || "").replace(/\D/g, "");
+      const { cpf_cnpj, cpfCnpj, cpf, provider_slug, provedor_slug } = req.body;
+      const cleanCpf = (cpf_cnpj || cpfCnpj || cpf || "").replace(/\D/g, "");
 
       if (!cleanCpf) {
         return res.status(400).json({ error: "CPF/CNPJ é obrigatório" });

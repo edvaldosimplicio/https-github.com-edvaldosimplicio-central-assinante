@@ -96,9 +96,11 @@ class SgpAdapter extends BaseErpAdapter {
     const list = typeof data === "string" && data.startsWith("[") ? JSON.parse(data) : Array.isArray(data) ? data : [];
     if (list.length === 0) return null;
     const item = list[0];
+    // Remove HTML tags from label before parsing
+    const cleanLabel = item.label.replace(/<[^>]*>/g, "").trim();
     return {
       codigo: String(item.id),
-      nome: item.label?.split(" - ")[0]?.trim() || "",
+      nome: cleanLabel.split(" - ")[0]?.trim() || "",
       cpfCnpj: cleanCpf,
       email: "",
       telefone: "",
@@ -106,6 +108,29 @@ class SgpAdapter extends BaseErpAdapter {
   }
 
   async getCliente(codigoCliente) {
+    // First try fast autocomplete lookup by ID
+    try {
+      const data = await this._get(`/public/autocomplete/ClienteAutocomplete/?tconsulta=id&term=${codigoCliente}`);
+      const list = typeof data === "string" && data.startsWith("[") ? JSON.parse(data) : Array.isArray(data) ? data : [];
+      const item = list.find(i => String(i.id) === String(codigoCliente));
+      if (item) {
+        const cleanLabel = item.label.replace(/<[^>]*>/g, "").trim();
+        const parts = cleanLabel.split(" - ");
+        const nome = parts[0]?.trim() || "";
+        const cpf = parts[1]?.replace(/\D/g, "") || "";
+        return {
+          codigo: String(codigoCliente),
+          nome,
+          cpfCnpj: cpf,
+          email: "",
+          telefone: "",
+        };
+      }
+    } catch (e) {
+      // Fall through to HTML scraping
+    }
+
+    // Fallback: HTML scraping
     const html = await this._get(`/admin/cliente/${codigoCliente}/edit/`);
     const nome = this._extract(html, /Nome\/Razão Social:\s*<span[^>]*>([^<]+)<\/span>/);
     const cpf = this._extract(html, /CPF\/CNPJ:\s*<span[^>]*>\s*([^<]+)\s*<\/span>/);
