@@ -19,4 +19,6 @@ flutter_app/.packages
 *.ntvs*
 *.njsproj
 *.sln
-*.sw?
+# Build binaries
+*.apk
+
